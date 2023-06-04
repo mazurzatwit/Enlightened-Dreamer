@@ -6,6 +6,9 @@ Enlightened Dreamer will help our users delve deeper into their dreams and sleep
 
 ##Installation
 Prerequisites: Pip Install with Python and qt5
+
+VS Code Extensions Required: Python and Pylance from Microsoft 
+
 Python Download: https://www.python.org/downloads/release/python-31010/ 
 
 MacOS X Console Commands:
