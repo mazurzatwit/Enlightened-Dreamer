@@ -25,7 +25,10 @@ if connection.is_connected():
     record = cursor.fetchone()
     print("You're connected to database: ", record[0])
 
-    user_permissions = "SELECT * FROM USERS WHERE Username = 'Elle' AND aes_decrypt(Password, 'PASS') = 'L0nd0nGirl';"
+    username = 'Elle'
+    password = 'L0nd0nGirl'
+
+    user_permissions = "SELECT * FROM USERS WHERE Username = ('%s') AND aes_decrypt(Password, 'PASS') = ('%s')" % (username, password)
     cursor = connection.cursor()
     cursor.execute(user_permissions)
     # get all records
