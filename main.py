@@ -7,6 +7,9 @@
 ## secondary storage. The data will be displayed by a GUI via the use of the backend. 
 
 ##  python3 -m pip install mysql-connector-python
+import sys
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import uic
 import mysql.connector
 
 print( "Let's Code a Project Ladies :))) ")
@@ -36,3 +39,9 @@ if connection.is_connected():
 
     for user in user_data:
         print("Welcome", user[3])
+
+app = QtWidgets.QApplication(sys.argv)
+
+window = uic.loadUi("UI/form.ui")
+window.show()
+app.exec()
