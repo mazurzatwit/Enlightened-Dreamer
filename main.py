@@ -8,11 +8,12 @@
 
 ##  python3 -m pip install mysql-connector-python
 import sys
+from PyQt5 import QtWidgets
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
 from PyQt5 import uic
 import mysql.connector
-
-print( "Let's Code a Project Ladies :))) ")
 
 ## Initial Connection
 connection = mysql.connector.connect(host='localhost',
@@ -40,9 +41,21 @@ if connection.is_connected():
     for user in user_data:
         print("Welcome", user[3])
 
-app = QtWidgets.QApplication(sys.argv)
+      
+class main_window(QMainWindow):
+     def __init__(self):
+          super(main_window, self).__init__()
 
-window = uic.loadUi("UI/login.ui")
-window.setWindowTitle("Enlightened Dreamer")
-window.show()
-app.exec()
+          #loading login UI
+          uic.loadUi("UI/login.ui", self)
+          self.show()
+          
+
+def main():
+    app = QApplication(sys.argv)
+    window = main_window()
+    window.setWindowTitle("Enlightened Dreamer")
+    sys.exit(app.exec_()) 
+main()
+
+
