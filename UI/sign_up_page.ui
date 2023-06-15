@@ -124,7 +124,7 @@
      <string>Sign Up to use Enlightened Dreamer!</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="sign_up_button">
+   <widget class="QPushButton" name="submit">
     <property name="geometry">
      <rect>
       <x>350</x>

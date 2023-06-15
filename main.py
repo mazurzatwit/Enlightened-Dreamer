@@ -48,8 +48,18 @@ class main_window(QMainWindow):
 
           #loading login UI
           uic.loadUi("UI/login.ui", self)
+          self.sign_up_button = self.findChild(QPushButton, "sign_up")
+          self.sign_up_button.clicked.connect(self.show_sign_up)
+
+          #UI show
           self.show()
-          
+
+     def show_sign_up(self):
+        #loading sign up UI
+        uic.loadUi("UI/sign_up_page.ui", self)
+        
+        #self.submit = self.findChild(QPushButton, "submit")
+        
 
 def main():
     app = QApplication(sys.argv)
