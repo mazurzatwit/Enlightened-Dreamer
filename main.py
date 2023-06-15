@@ -42,6 +42,7 @@ if connection.is_connected():
 
 app = QtWidgets.QApplication(sys.argv)
 
-window = uic.loadUi("UI/form.ui")
+window = uic.loadUi("UI/login.ui")
+window.setWindowTitle("Enlightened Dreamer")
 window.show()
 app.exec()
