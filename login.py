@@ -37,7 +37,7 @@ class login_page(QMainWindow):
         #loading sign up UI
         uic.loadUi("UI/sign_up_page.ui", self)
 
-        #sign up information
+        #sign up information for new user
         self.name = self.findChild(QLineEdit, "name_textbox")
         self.email = self.findChild(QLineEdit, "email_textbox")
         self.uname = self.findChild(QLineEdit, "username_textbox")
