@@ -49,23 +49,25 @@ class main_window(QMainWindow):
 
           #loading login UI
           uic.loadUi("UI/login.ui", self)
-          self.sign_up_button = self.findChild(QPushButton, "sign_up")
-          self.sign_up_button.clicked.connect(self.show_sign_up)
+          login_button = self.findChild(QPushButton, "login_button")
+          
+          sign_up = self.findChild(QPushButton, "sign_up")
 
+            
           self.login = login_page(self)
           self.setCentralWidget(self.login)
+        
+          self.sign_up = login_page(self)  
+          sign_up.clicked.connect(self.sign_up.show_sign_up)
 
-          #login_button = self.findChild(QPushButton, "login_button")
+
+          
           #login_button.clicked.connect(self.login.save_text)
 
           #UI show
           self.show()
 
-     def show_sign_up(self):
-        #loading sign up UI
-        uic.loadUi("UI/sign_up_page.ui", self)
-        
-        #self.submit = self.findChild(QPushButton, "submit")
+    
         
 
 def main():
