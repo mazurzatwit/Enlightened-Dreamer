@@ -19,7 +19,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="uername_textbox">
+   <widget class="QLineEdit" name="username_textbox">
     <property name="geometry">
      <rect>
       <x>352</x>

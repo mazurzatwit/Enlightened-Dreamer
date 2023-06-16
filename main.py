@@ -13,6 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import uic
+from login import login_page
 import mysql.connector
 
 ## Initial Connection
@@ -50,6 +51,12 @@ class main_window(QMainWindow):
           uic.loadUi("UI/login.ui", self)
           self.sign_up_button = self.findChild(QPushButton, "sign_up")
           self.sign_up_button.clicked.connect(self.show_sign_up)
+
+          self.login = login_page(self)
+          self.setCentralWidget(self.login)
+
+          #login_button = self.findChild(QPushButton, "login_button")
+          #login_button.clicked.connect(self.login.save_text)
 
           #UI show
           self.show()
