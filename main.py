@@ -47,38 +47,41 @@ if connection.is_connected():
 class main_window(QMainWindow):
      def __init__(self):
           super().__init__()
-          uic.loadUi("UI/login.ui", self)
+          uic.loadUi("UI/Home.ui", self)
 
-          self.ui_stack = QStackedWidget()
-          self.login = login_page()
-          self.ui_stack.addWidget(self.login) #index 0
-          self.sign_up = sign_up_page()
-          self.ui_stack.addWidget(self.sign_up) #index 1
+          self.ui_stack = self.findChild(QStackedWidget, "stackedWidget")
+          self.home = self.findChild(QWidget, "home_page")
+          self.login_page = self.findChild(QWidget, "login_page")
+          self.sign_up_page = self.findChild(QWidget, "sign_up_page")
 
-          #loading login UI
+          self.ui_stack.setCurrentWidget(self.home)
           
-          #login_button = self.findChild(QPushButton, "login_button")
+          #home page buttons
+          self.sign_up_button = self.findChild(QPushButton, "sign_up_button")
+          self.login_button = self.findChild(QPushButton, "login_button")
+          self.sign_up_button.clicked.connect(self.show_sign_up_page)
+          self.login_button.clicked.connect(self.show_login_page)
           
-          self.sign_up_button = self.findChild(QPushButton, "sign_up")
+          #login page button
+          self.login_btn = self.findChild(QPushButton, "login_btn")
 
-          self.sign_up_button.clicked.connect(self.create_sign_up)
-
-
-          
-          #login_button.clicked.connect(self.login.save_text)
+          #sign up page button
+          self.submit_button = self.findChild(QPushButton, "submit_button")
 
           #UI show
-          self.show()
+          #self.show()
 
-     def create_sign_up(self):
-        self.ui_stack.setCurrentIndex(1)
+     def show_sign_up_page(self):
+          self.ui_stack.setCurrentWidget(self.sign_up_page)
 
-    
-        
+     def show_login_page(self):
+          self.ui_stack.setCurrentWidget(self.login_page)
+
 
 def main():
     app = QApplication(sys.argv)
     window = main_window()
+    window.show()
     window.setWindowTitle("Enlightened Dreamer")
     sys.exit(app.exec_()) 
 main()
