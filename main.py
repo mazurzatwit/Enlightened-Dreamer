@@ -8,12 +8,13 @@
 
 ##  python3 -m pip install mysql-connector-python
 import sys
-from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QStackedWidget
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import uic
 from login import login_page
+from sign_up import sign_up_page
 import mysql.connector
 
 ## Initial Connection
@@ -45,20 +46,22 @@ if connection.is_connected():
       
 class main_window(QMainWindow):
      def __init__(self):
-          super(main_window, self).__init__()
+          super().__init__()
+          uic.loadUi("UI/login.ui", self)
+
+          self.ui_stack = QStackedWidget()
+          self.login = login_page()
+          self.ui_stack.addWidget(self.login) #index 0
+          self.sign_up = sign_up_page()
+          self.ui_stack.addWidget(self.sign_up) #index 1
 
           #loading login UI
-          uic.loadUi("UI/login.ui", self)
-          login_button = self.findChild(QPushButton, "login_button")
           
-          sign_up = self.findChild(QPushButton, "sign_up")
+          #login_button = self.findChild(QPushButton, "login_button")
+          
+          self.sign_up_button = self.findChild(QPushButton, "sign_up")
 
-            
-          self.login = login_page(self)
-          self.setCentralWidget(self.login)
-        
-          self.sign_up = login_page(self)  
-          sign_up.clicked.connect(self.sign_up.show_sign_up)
+          self.sign_up_button.clicked.connect(self.create_sign_up)
 
 
           
@@ -66,6 +69,9 @@ class main_window(QMainWindow):
 
           #UI show
           self.show()
+
+     def create_sign_up(self):
+        self.ui_stack.setCurrentIndex(1)
 
     
         
