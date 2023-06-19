@@ -1,26 +1,28 @@
 import sys
-from PyQt5 import QtWidgets
-from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import uic
 import mysql.connector
 
-class login_page(QWidget):
+class login_page(QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        uic.loadUi("UI/login.ui", self)
+        uic.loadUi("UI/Home.ui", self)
 
         #login username and password
+        self.ui_stack = self.findChild(QStackedWidget, "stackedWidget")
+        self.login_page = self.findChild(QWidget, "login_page")
+
+        #finds text
+        self.login_btn = self.findChild(QPushButton, "login_btn")
         self.username_text = self.findChild(QLineEdit, "username_textbox")
         self.password_text = self.findChild(QLineEdit, "password_textbox")
+        #print(self.username_text.text())
 
-        self.login_button = self.findChild(QPushButton, "login_button")
-        self.login_button.clicked.connect(self.save_text)
+        #self.login_btn.clicked.connect(self.save_text)
 
-        self.sign_up_button = self.findChild(QPushButton, "sign_up")
+        self.save_text()
 
-        #self.save_text()
 
     def save_text(self):
         username_text = self.username_text.text()

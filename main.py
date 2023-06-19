@@ -8,12 +8,13 @@
 
 ##  python3 -m pip install mysql-connector-python
 import sys
-from PyQt5.QtWidgets import QStackedWidget
+import typing
+from PyQt5.QtWidgets import QStackedWidget, QWidget
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import uic
-from login import login_page
+import login
 from sign_up import sign_up_page
 import mysql.connector
 
@@ -43,6 +44,13 @@ if connection.is_connected():
     for user in user_data:
         print("Welcome", user[3])
 
+
+#class save_login(QMainWindow):
+     
+    #def __init__(self):
+     #    super().__init__()
+      #   self.save_login = login.login_page()
+         #self.save_login()
       
 class main_window(QMainWindow):
      def __init__(self):
@@ -64,12 +72,17 @@ class main_window(QMainWindow):
           
           #login page button
           self.login_btn = self.findChild(QPushButton, "login_btn")
+          self.login_btn.clicked.connect(self.login_save_click)
+          
 
           #sign up page button
           self.submit_button = self.findChild(QPushButton, "submit_button")
 
           #UI show
           #self.show()
+
+     def login_save_click(self):
+          self.save_login = login.login_page()
 
      def show_sign_up_page(self):
           self.ui_stack.setCurrentWidget(self.sign_up_page)
