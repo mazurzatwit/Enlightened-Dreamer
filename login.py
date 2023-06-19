@@ -7,21 +7,27 @@ import mysql.connector
 class login_page(QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        uic.loadUi("UI/Home.ui", self)
+        #uic.loadUi("UI/Home.ui", self)
 
         #login username and password
-        self.ui_stack = self.findChild(QStackedWidget, "stackedWidget")
-        self.login_page = self.findChild(QWidget, "login_page")
+        #self.ui_stack = self.findChild(QStackedWidget, "stackedWidget")
+        #self.login_page = self.findChild(QWidget, "login_page")
 
         #finds text
+        uic.loadUi("UI/Home.ui", self)
+
+        self.ui_stack = self.findChild(QStackedWidget, "stackedWidget")
+        self.login_page = self.findChild(QWidget, "login_page")
+        self.ui_stack.setCurrentWidget(self.login_page)
+        
         self.login_btn = self.findChild(QPushButton, "login_btn")
         self.username_text = self.findChild(QLineEdit, "username_textbox")
         self.password_text = self.findChild(QLineEdit, "password_textbox")
         #print(self.username_text.text())
 
-        #self.login_btn.clicked.connect(self.save_text)
+        self.login_btn.clicked.connect(self.save_text)
 
-        self.save_text()
+        #self.save_text()
 
 
     def save_text(self):
