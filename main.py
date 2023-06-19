@@ -32,17 +32,17 @@ if connection.is_connected():
     record = cursor.fetchone()
     print("You're connected to database: ", record[0])
 
-    username = 'Elle'
-    password = 'L0nd0nGirl'
+    #username = 'Elle'
+    #password = 'L0nd0nGirl'
 
-    user_permissions = "SELECT * FROM USERS WHERE Username = ('%s') AND aes_decrypt(Password, 'PASS') = ('%s')" % (username, password)
-    cursor = connection.cursor()
-    cursor.execute(user_permissions)
+    #user_permissions = "SELECT * FROM USERS WHERE Username = ('%s') AND aes_decrypt(Password, 'PASS') = ('%s')" % (username, password)
+   #cursor = connection.cursor()
+    #cursor.execute(user_permissions)
     # get all records
-    user_data = cursor.fetchall()
+    #user_data = cursor.fetchall()
 
-    for user in user_data:
-        print("Welcome", user[3])
+    #for user in user_data:
+    #    print("Welcome", user[3])
 
 
 #class save_login(QMainWindow):
@@ -103,8 +103,8 @@ class main_window(QMainWindow):
 
          user_sign_up = "INSERT INTO Users (User_ID, Name, Email, Username, Password) SELECT * FROM (  SELECT IF(NOT EXISTS (SELECT * FROM Users WHERE User_ID = FLOOR(RAND() * 90000 + 10000)), FLOOR(RAND() * 90000 + 10000), NULL) AS User_ID, ('%s') AS Name, ('%s') AS Email, ('%s') AS Username, AES_ENCRYPT(('%s'), 'PASS') AS Password ) AS tmp" % (name_text, email_text, uname_text, pass_text)
 
-         cursor = connection.cursor()
-         cursor.execute(user_sign_up)
+         cursor1 = connection.cursor()
+         cursor1.execute(user_sign_up)
          connection.commit()
 
 
