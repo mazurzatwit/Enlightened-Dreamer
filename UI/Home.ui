@@ -187,6 +187,22 @@
        <string>Login</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="back_button">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000000</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="sign_up_page">
      <property name="styleSheet">
@@ -351,6 +367,22 @@
       </property>
       <property name="text">
        <string>Submit</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="back_btn">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #000000</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
       </property>
      </widget>
     </widget>

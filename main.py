@@ -72,18 +72,23 @@ class main_window(QMainWindow):
           
           #login page button
           self.login_btn = self.findChild(QPushButton, "login_btn")
+          self.back_button = self.findChild(QPushButton, "back_button")
           self.username_text = self.findChild(QLineEdit, "username_textbox")
           self.password_text = self.findChild(QLineEdit, "password_textbox")
           self.login_btn.clicked.connect(self.login_save_click)
+          self.back_button.clicked.connect(self.show_home_page)
           
 
           #sign up page button
           self.submit_button = self.findChild(QPushButton, "submit_button")
+          self.back_btn = self.findChild(QPushButton, "back_btn")
           self.username_text = self.findChild(QLineEdit, "name_textbox")
           self.email_text = self.findChild(QLineEdit, "email_textbox")
           self.uname_text = self.findChild(QLineEdit, "uname_textbox")
           self.pass_text = self.findChild(QLineEdit, "pass_textbox")
           self.submit_button.clicked.connect(self.sign_up_save)
+          self.back_btn.clicked.connect(self.show_home_page)
+
 
           #UI show
           #self.show()
@@ -121,6 +126,10 @@ class main_window(QMainWindow):
 
      def show_login_page(self):
           self.ui_stack.setCurrentWidget(self.login_page)
+
+     def show_home_page(self):
+          self.ui_stack.setCurrentWidget(self.home)
+
 
 
 def main():
