@@ -1,2 +1,4 @@
 .DS_Store
 __pycache__/login.cpython-310.pyc
+__pycache__/sign_up.cpython-310.pyc
+.gitignore
