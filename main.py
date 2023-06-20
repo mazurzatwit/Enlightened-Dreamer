@@ -128,6 +128,12 @@ class main_window(QMainWindow):
 
      def show_home_page(self):
           self.ui_stack.setCurrentWidget(self.home)
+          self.name_text.clear()
+          self.email_text.clear()
+          self.uname_text.clear()
+          self.pass_text.clear()
+          self.username_text.clear()
+          self.password_text.clear()
 
 
 
