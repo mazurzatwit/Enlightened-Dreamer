@@ -6,31 +6,26 @@ from PyQt5.QtGui import *
 from PyQt5 import uic
 import mysql.connector
 
-class sign_up_page(QWidget):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        uic.loadUi("UI/sign_up_page.ui", self)
-        self.show()
+#database connection
+connection = mysql.connector.connect(host='localhost',
+                                         database='enlightened dreamer',
+                                         user='root')
 
+cursor = connection.cursor()
+
+class sign_up_page:
+    
+    def __init__(self, name, email, username, password):
+        self.name = name
+        self.email = email
+        self.username = username
+        self.password = password
+
+    def save_new_user (self):
+         user_sign_up = "INSERT INTO Users (User_ID, Name, Email, Username, Password) SELECT * FROM (  SELECT IF(NOT EXISTS (SELECT * FROM Users WHERE User_ID = FLOOR(RAND() * 90000 + 10000)), FLOOR(RAND() * 90000 + 10000), NULL) AS User_ID, ('%s') AS Name, ('%s') AS Email, ('%s') AS Username, AES_ENCRYPT(('%s'), 'PASS') AS Password ) AS tmp" % (self.name, self.email, self.username, self.password)
+
+         cursor.execute(user_sign_up)
+         connection.commit()
+
+         
        
-    def show_sign_up(self):
-        #loading sign up UI
-            uic.loadUi("UI/sign_up_page.ui", self)
-
-            #sign up information for new user
-            #self.name = self.findChild(QLineEdit, "name_textbox")
-            #self.email = self.findChild(QLineEdit, "email_textbox")
-            #self.uname = self.findChild(QLineEdit, "username_textbox")
-            #self.pword = self.findChild(QLineEdit, "password_textbox")
-            
-            #self.submit = self.findChild(QPushButton, "submit")
-            #self.submit.clicked.connect(self.sign_up_info)
-
-    def sign_up_info(self):
-        name_text = self.name.text()
-        email_text = self.email.text()
-        uname_text = self.uname.text()
-        pword_text = self.pword.text()
-
-        new_user_info = [name_text, email_text, uname_text, pword_text]
-        print(new_user_info)

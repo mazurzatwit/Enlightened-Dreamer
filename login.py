@@ -4,38 +4,26 @@ from PyQt5.QtGui import *
 from PyQt5 import uic
 import mysql.connector
 
-class login_page(QMainWindow):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        #uic.loadUi("UI/Home.ui", self)
+#database connection
+connection = mysql.connector.connect(host='localhost',
+                                         database='enlightened dreamer',
+                                         user='root')
 
-        #login username and password
-        #self.ui_stack = self.findChild(QStackedWidget, "stackedWidget")
-        #self.login_page = self.findChild(QWidget, "login_page")
+cursor = connection.cursor()
 
-        #finds text
-        uic.loadUi("UI/Home.ui", self)
+class main_login:
 
-        self.ui_stack = self.findChild(QStackedWidget, "stackedWidget")
-        self.login_page = self.findChild(QWidget, "login_page")
-        self.ui_stack.setCurrentWidget(self.login_page)
-        
-        self.login_btn = self.findChild(QPushButton, "login_btn")
-        self.username_text = self.findChild(QLineEdit, "username_textbox")
-        self.password_text = self.findChild(QLineEdit, "password_textbox")
-        #print(self.username_text.text())
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
 
-        self.login_btn.clicked.connect(self.save_text)
-
-        #self.save_text()
-
-
-    def save_text(self):
-        username_text = self.username_text.text()
-        password_text = self.password_text.text()
-
-        login_info = [username_text, password_text]
-        print(login_info)
-
-        #print(username_text, password_text)
+    def check_login_creds(self):
+        # Checks if user is in Database
+        user_permissions = "SELECT IF(Username = ('%s'), 'True', 'False') FROM users WHERE aes_decrypt(Password, 'PASS') = ('%s')" % (self.username, self.password)
+        cursor.execute(user_permissions)
+        user_data = cursor.fetchall()
+          
+        for user in user_data:
+            print(user[0])    
+   
 
