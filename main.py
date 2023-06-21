@@ -19,9 +19,9 @@ import sign_up
 import mysql.connector
 
 ## Initial Connection
-connection = mysql.connector.connect(host='127.0.0.1',
+connection = mysql.connector.connect(host='10.220.32.138',
                                          database='ed',
-                                         user='AdminAccount',
+                                         user='Zoe',
                                          password='4r3y3s')
 
 ## Checks SQL connection
