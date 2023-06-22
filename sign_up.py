@@ -6,11 +6,10 @@ from PyQt5.QtGui import *
 from PyQt5 import uic
 import mysql.connector
 
-#database connection
+## Initial Connection
 connection = mysql.connector.connect(host='localhost',
-                                         database='ed',
-                                         user='Zoe',
-                                         password='4r3y3s')
+                                         database='enlightened dreamer',
+                                         user='root')
 
 cursor = connection.cursor()
 
