@@ -19,11 +19,16 @@ class main_login:
 
     def check_login_creds(self):
         # Checks if user is in Database
-        user_permissions = "SELECT IF(Username = ('%s'), 'True', 'False') FROM users WHERE aes_decrypt(Password, 'PASS') = ('%s')" % (self.username, self.password)
+        user_permissions = "SELECT IF(EXISTS (SELECT * FROM users WHERE Username = ('%s') AND aes_decrypt(Password, 'PASS') = ('%s')),'True','False') AS result" % (self.username, self.password) 
         cursor.execute(user_permissions)
         user_data = cursor.fetchall()
           
         for user in user_data:
-            print(user[0])    
+            response = user[0]
+        
+        if response == "True":
+            return True
+        else:
+            return False
    
 

@@ -137,7 +137,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/Enligtened Dreamer/Enlightened-Dreamer/app_logo-removebg-preview.png</pixmap>
+       <pixmap>../app_logo-removebg-preview.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -339,7 +339,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/Enligtened Dreamer/Enlightened-Dreamer/app_logo-removebg-preview.png</pixmap>
+       <pixmap>../app_logo-removebg-preview.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -629,7 +629,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/Enligtened Dreamer/Enlightened-Dreamer/app_logo-removebg-preview.png</pixmap>
+       <pixmap>../app_logo-removebg-preview.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -969,7 +969,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/Enligtened Dreamer/Enlightened-Dreamer/app_logo-removebg-preview.png</pixmap>
+       <pixmap>../app_logo-removebg-preview.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>

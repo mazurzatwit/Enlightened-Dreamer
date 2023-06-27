@@ -16,6 +16,7 @@ from PyQt5.QtGui import *
 from PyQt5 import uic
 import login
 import sign_up
+import dashboard
 import mysql.connector
 
 ## Initial Connection
@@ -45,6 +46,7 @@ class main_window(QMainWindow):
           self.home = self.findChild(QWidget, "home_page")
           self.login_page = self.findChild(QWidget, "login_page")
           self.sign_up_page = self.findChild(QWidget, "sign_up_page")
+          self.dashboard = self.findChild(QWidget, "dashboard_page")
 
           self.ui_stack.setCurrentWidget(self.home)
           
@@ -61,7 +63,6 @@ class main_window(QMainWindow):
           self.password_text = self.findChild(QLineEdit, "password_textbox")
           self.login_btn.clicked.connect(self.login_save_click)
           self.back_button.clicked.connect(self.show_home_page)
-          
 
           #sign up page button
           self.submit_button = self.findChild(QPushButton, "submit_button")
@@ -73,13 +74,23 @@ class main_window(QMainWindow):
           self.submit_button.clicked.connect(self.sign_up_save)
           self.back_btn.clicked.connect(self.show_home_page)
 
+          #dashboard buttons
+          self.dream_info_btn = self.findChild(QPushButton, "dream_info_button")
+          self.dashboard_view = dashboard.dashboard_view(0,0,0,0,0)
+          self.dream_info_btn.clicked.connect(self.dashboard_view.dream_info_popup)
+
          
      def login_save_click(self):
           username_text = self.username_text.text()
           password_text = self.password_text.text()
 
           self.curr_login = login.main_login(username_text, password_text)
-          self.curr_login.check_login_creds()
+          #self.curr_login.check_login_creds()
+
+          if self.curr_login.check_login_creds():
+               self.ui_stack.setCurrentWidget(self.dashboard)
+          else:
+               print("false")
 
         
      def sign_up_save(self):
