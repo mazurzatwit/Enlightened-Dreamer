@@ -29,14 +29,14 @@
     <property name="font">
      <font>
       <family>Palatino</family>
-      <pointsize>14</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: 00000; color: #00000</string>
+     <string notr="true">background-color: 00000</string>
     </property>
     <property name="currentIndex">
      <number>3</number>
@@ -137,7 +137,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/app_logo-removebg-preview.png</pixmap>
+       <pixmap>../../Desktop/Enligtened Dreamer/Enlightened-Dreamer/app_logo-removebg-preview.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -339,7 +339,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/app_logo-removebg-preview.png</pixmap>
+       <pixmap>../../Desktop/Enligtened Dreamer/Enlightened-Dreamer/app_logo-removebg-preview.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -629,7 +629,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/app_logo-removebg-preview.png</pixmap>
+       <pixmap>../../Desktop/Enligtened Dreamer/Enlightened-Dreamer/app_logo-removebg-preview.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -659,7 +659,7 @@
      <widget class="QComboBox" name="comboBox">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>440</x>
         <y>150</y>
         <width>131</width>
         <height>21</height>
@@ -744,7 +744,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>Enter your dream...</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="dashboard_title">
       <property name="geometry">
        <rect>
         <x>360</x>
@@ -766,7 +766,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_14">
+     <widget class="QLabel" name="date_label">
       <property name="geometry">
        <rect>
         <x>270</x>
@@ -788,7 +788,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="fell_asleep_label">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -877,7 +877,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </time>
       </property>
      </widget>
-     <widget class="QLabel" name="label_12">
+     <widget class="QLabel" name="woke_up_label">
       <property name="geometry">
        <rect>
         <x>360</x>
@@ -969,7 +969,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/app_logo-removebg-preview.png</pixmap>
+       <pixmap>../../Desktop/Enligtened Dreamer/Enlightened-Dreamer/app_logo-removebg-preview.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1026,7 +1026,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_16">
+     <widget class="QLabel" name="day_label">
       <property name="geometry">
        <rect>
         <x>100</x>
@@ -1048,12 +1048,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_17">
+     <widget class="QLabel" name="dream_type_button">
       <property name="geometry">
        <rect>
         <x>440</x>
         <y>125</y>
-        <width>111</width>
+        <width>101</width>
         <height>20</height>
        </rect>
       </property>
@@ -1068,6 +1068,26 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="alignment">
        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="dream_info_button">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>145</y>
+        <width>21</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>PT Serif</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>i</string>
       </property>
      </widget>
     </widget>
