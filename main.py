@@ -80,10 +80,10 @@ class main_window(QMainWindow):
           self.dream_info_btn.clicked.connect(self.dashboard_view1.dream_info_popup)
 
           #dashboard buttons
-          self.sleep_time = self.findChild(QTimeEdit, "fell_asleep_time")
-          self.wake_time = self.findChild(QTimeEdit, "wake_up_time")
+          self.sleep_time = self.findChild(QLineEdit, "fell_asleep_time")
+          self.wake_time = self.findChild(QLineEdit, "wake_up_time")
           self.dream = self.findChild(QTextEdit, "dream_text_edit")
-          self.date = self.findChild(QDateEdit, "dateEdit")
+          self.date = self.findChild(QLineEdit, "dateEdit")
           self.dashboard_save_btn = self.findChild(QPushButton, "save_button")
           self.dashboard_save_btn.clicked.connect(self.dashboard_save)
 
@@ -110,6 +110,8 @@ class main_window(QMainWindow):
 
          self.new_user = sign_up.sign_up_page(name_text, email_text, uname_text, pass_text)
          self.new_user.save_new_user()
+
+         self.ui_stack.setCurrentWidget(self.login_page)         
 
          self.name_text.clear()
          self.email_text.clear()

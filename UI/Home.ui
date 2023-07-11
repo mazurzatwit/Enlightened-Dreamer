@@ -709,7 +709,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QTextEdit" name="textEdit">
+     <widget class="QTextEdit" name="dream_text_edit">
       <property name="geometry">
        <rect>
         <x>610</x>
@@ -793,7 +793,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <rect>
         <x>170</x>
         <y>200</y>
-        <width>81</width>
+        <width>121</width>
         <height>16</height>
        </rect>
       </property>
@@ -804,80 +804,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </font>
       </property>
       <property name="text">
-       <string>Fell Asleep:</string>
+       <string>Bed Time:</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-      </property>
-     </widget>
-     <widget class="QTimeEdit" name="fell_asleep_time">
-      <property name="geometry">
-       <rect>
-        <x>170</x>
-        <y>220</y>
-        <width>118</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Palatino</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: 00000</string>
-      </property>
-     </widget>
-     <widget class="QDateEdit" name="dateEdit">
-      <property name="geometry">
-       <rect>
-        <x>270</x>
-        <y>150</y>
-        <width>110</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Palatino</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: 00000; </string>
-      </property>
-      <property name="wrapping">
-       <bool>false</bool>
-      </property>
-      <property name="displayFormat">
-       <string>yyyy-mm-dd</string>
-      </property>
-     </widget>
-     <widget class="QTimeEdit" name="wake_up_time">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>220</y>
-        <width>118</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Palatino</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: 00000</string>
-      </property>
-      <property name="time">
-       <time>
-        <hour>12</hour>
-        <minute>0</minute>
-        <second>0</second>
-       </time>
       </property>
      </widget>
      <widget class="QLabel" name="woke_up_text_label">
@@ -885,7 +815,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <rect>
         <x>360</x>
         <y>200</y>
-        <width>71</width>
+        <width>101</width>
         <height>16</height>
        </rect>
       </property>
@@ -896,7 +826,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </font>
       </property>
       <property name="text">
-       <string>Woke Up:</string>
+       <string>Wake Up Time:</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -1091,6 +1021,72 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="text">
        <string>i</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="dateEdit">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>150</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: 00000</string>
+      </property>
+      <property name="placeholderText">
+       <string>YYYY-MM-DD</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="fell_asleep_time">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>220</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: 00000</string>
+      </property>
+      <property name="placeholderText">
+       <string>Ex: 8:00 PM </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="wake_up_time">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>220</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: 00000</string>
+      </property>
+      <property name="placeholderText">
+       <string>Ex: 8:00 AM </string>
       </property>
      </widget>
     </widget>
