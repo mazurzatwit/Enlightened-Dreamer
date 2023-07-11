@@ -76,8 +76,17 @@ class main_window(QMainWindow):
 
           #dashboard buttons
           self.dream_info_btn = self.findChild(QPushButton, "dream_info_button")
-          self.dashboard_view = dashboard.dashboard_view(0,0,0,0,0)
-          self.dream_info_btn.clicked.connect(self.dashboard_view.dream_info_popup)
+          self.dashboard_view1 = dashboard.dashboard_view(0,0,0,0,0)
+          self.dream_info_btn.clicked.connect(self.dashboard_view1.dream_info_popup)
+
+          #dashboard buttons
+          self.sleep_time = self.findChild(QTimeEdit, "fell_asleep_time")
+          self.wake_time = self.findChild(QTimeEdit, "wake_up_time")
+          self.dream = self.findChild(QTextEdit, "dream_text_edit")
+          self.date = self.findChild(QDateEdit, "dateEdit")
+          self.dashboard_save_btn = self.findChild(QPushButton, "save_button")
+          self.dashboard_save_btn.clicked.connect(self.dashboard_save)
+
 
          
      def login_save_click(self):
@@ -108,11 +117,14 @@ class main_window(QMainWindow):
          self.pass_text.clear()
 
      def dashboard_save(self):
-          self.sleep_time = self.sleep_time
-          self.wake_time = self.wake_time
-          self.dream = self.dream
-          self.date = self.date
-          self.username = self.username
+          sleep_time = self.sleep_time.text()
+          wake_time = self.wake_time.text()
+          dream = self.dream.toPlainText()
+          date = self.date.text()
+          username = self.username_text.text()
+
+          self.dash_save = dashboard.dashboard_view(sleep_time, wake_time, dream, date, username)
+          self.dash_save.save_new_dream()
 
 
 
