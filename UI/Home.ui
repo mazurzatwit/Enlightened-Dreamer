@@ -656,7 +656,7 @@
        <enum>Qt::Vertical</enum>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="dream_type_dropdown">
       <property name="geometry">
        <rect>
         <x>440</x>
@@ -788,7 +788,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="fell_asleep_label">
+     <widget class="QLabel" name="fell_asleep_text_label">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -810,7 +810,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
       </property>
      </widget>
-     <widget class="QTimeEdit" name="timeEdit">
+     <widget class="QTimeEdit" name="fell_asleep_label">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -851,7 +851,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QTimeEdit" name="timeEdit_2">
+     <widget class="QTimeEdit" name="wake_up_time">
       <property name="geometry">
        <rect>
         <x>360</x>
@@ -877,7 +877,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </time>
       </property>
      </widget>
-     <widget class="QLabel" name="woke_up_label">
+     <widget class="QLabel" name="woke_up_text_label">
       <property name="geometry">
        <rect>
         <x>360</x>
@@ -899,7 +899,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox_10">
+     <widget class="QComboBox" name="day_dropdown">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1010,7 +1010,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="for_saved_dreams">
       <property name="geometry">
        <rect>
         <x>580</x>
@@ -1048,7 +1048,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="dream_type_button">
+     <widget class="QLabel" name="dream_type_label">
       <property name="geometry">
        <rect>
         <x>440</x>
