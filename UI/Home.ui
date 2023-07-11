@@ -810,7 +810,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
       </property>
      </widget>
-     <widget class="QTimeEdit" name="fell_asleep_label">
+     <widget class="QTimeEdit" name="fell_asleep_time">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -849,6 +849,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="wrapping">
        <bool>false</bool>
+      </property>
+      <property name="displayFormat">
+       <string>yyyy-mm-dd</string>
       </property>
      </widget>
      <widget class="QTimeEdit" name="wake_up_time">
