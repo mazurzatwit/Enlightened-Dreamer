@@ -33,4 +33,10 @@ class dashboard_view:
         
         popup.exec()
 
+    def save_new_dream(self):
+         save_dream = "INSERT INTO Data SELECT ('%s'), ('%s'), ('%s'), ('%s'), ('%s')"\
+                      "FROM Users WHERE Username = ('%s')" % (self.sleep_time, self.wake_time, self.dream, self.date, self.username)
+
+         cursor.execute()
+         connection.commit()
           

@@ -19,7 +19,9 @@ class main_login:
 
     def check_login_creds(self):
         # Checks if user is in Database
-        user_permissions = "SELECT IF(EXISTS (SELECT * FROM users WHERE Username = ('%s') AND aes_decrypt(Password, 'PASS') = ('%s')),'True','False') AS result" % (self.username, self.password) 
+        user_permissions = "SELECT IF(EXISTS (SELECT * FROM users WHERE Username = ('%s')"\
+                            "AND aes_decrypt(Password, 'PASS') = ('%s')),'True','False') AS result" % (self.username, self.password) 
+        
         cursor.execute(user_permissions)
         user_data = cursor.fetchall()
           

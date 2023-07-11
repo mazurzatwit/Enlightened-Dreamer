@@ -107,6 +107,14 @@ class main_window(QMainWindow):
          self.uname_text.clear()
          self.pass_text.clear()
 
+     def dashboard_save(self):
+          self.sleep_time = self.sleep_time
+          self.wake_time = self.wake_time
+          self.dream = self.dream
+          self.date = self.date
+          self.username = self.username
+
+
 
      def show_sign_up_page(self):
           self.ui_stack.setCurrentWidget(self.sign_up_page)
