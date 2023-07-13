@@ -90,7 +90,7 @@ class main_window(QMainWindow):
           self.tips_btn = self.findChild(QPushButton, "sleep_resources_btn")
           self.tips_btn.clicked.connect(self.show_tips_page)
           self.back_tips = self.findChild(QPushButton, "back_btn2")
-          self.back_btn.clicked.connect(self.show_dashboard)
+          self.back_tips.clicked.connect(self.show_dashboard)
 
          
      def login_save_click(self):
