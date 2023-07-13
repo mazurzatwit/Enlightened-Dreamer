@@ -164,6 +164,7 @@
        <font>
         <family>Palatino</family>
         <pointsize>28</pointsize>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
@@ -292,7 +293,7 @@
        <string>Login</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="back_button">
+     <widget class="QPushButton" name="back_btn1">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -366,6 +367,7 @@
        <font>
         <family>Palatino</family>
         <pointsize>24</pointsize>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
@@ -513,7 +515,7 @@
        <string>Submit</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="back_btn">
+     <widget class="QPushButton" name="back_btn3">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -757,6 +759,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <font>
         <family>Palatino</family>
         <pointsize>30</pointsize>
+        <bold>true</bold>
        </font>
       </property>
       <property name="text">
@@ -924,6 +927,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <font>
         <family>Palatino</family>
         <pointsize>18</pointsize>
+        <kerning>true</kerning>
        </font>
       </property>
       <property name="styleSheet">
@@ -1089,6 +1093,29 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>Ex: 8:00 AM </string>
       </property>
      </widget>
+     <widget class="QPushButton" name="sleep_resources_btn">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>260</y>
+        <width>131</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>16</pointsize>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+      </property>
+      <property name="text">
+       <string>Sleep Resources</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tips_page">
      <property name="styleSheet">
@@ -1107,6 +1134,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <font>
         <family>Palatino</family>
         <pointsize>30</pointsize>
+        <bold>true</bold>
        </font>
       </property>
       <property name="text">
@@ -1121,8 +1149,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>75</width>
-        <height>75</height>
+        <width>91</width>
+        <height>91</height>
        </rect>
       </property>
       <property name="maximumSize">
@@ -1157,6 +1185,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <font>
         <family>Palatino</family>
         <pointsize>18</pointsize>
+        <bold>true</bold>
        </font>
       </property>
       <property name="text">
@@ -1584,6 +1613,232 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string>24 hours</string>
        </property>
       </item>
+     </widget>
+     <widget class="QPushButton" name="play_pause_btn">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>740</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+      </property>
+      <property name="text">
+       <string>Pause</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="back_btn2">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="sleep_bedtime_label">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>120</y>
+        <width>221</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Sleep &amp; Bedtime Routine </string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>120</y>
+        <width>221</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Relaxation</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>120</y>
+        <width>271</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>What is healthy sleep?</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>280</y>
+        <width>271</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>How much sleep do you need?</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>190</y>
+        <width>241</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>for sleep tips</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>340</y>
+        <width>231</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>
+Infants: 12 – 16 hours
+
+ Toddlers: 11 – 14 hours 
+
+ Preschoolers: 10 – 13 hours 
+
+ Children: 9 – 12 hours 
+
+ Teenagers: 8 – 10 hours 
+
+ Adults: 7– 9 hours 
+
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>170</y>
+        <width>231</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Healthy sleep is about the amount of sleep, but also the quality of sleep one can get. 
+
+ Your brain needs to go through a series of sleep cycles. These cycles help you get the best kind of rest.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
      </widget>
     </widget>
    </widget>
