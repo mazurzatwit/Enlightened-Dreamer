@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1042</width>
+    <width>1047</width>
     <height>803</height>
    </rect>
   </property>
@@ -39,7 +39,7 @@
      <string notr="true">background-color: 00000</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="home_page">
      <property name="styleSheet">
@@ -941,7 +941,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>430</y>
+        <y>380</y>
         <width>411</width>
         <height>321</height>
        </rect>
@@ -951,7 +951,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <property name="geometry">
        <rect>
         <x>580</x>
-        <y>430</y>
+        <y>380</y>
         <width>411</width>
         <height>311</height>
        </rect>
@@ -1114,6 +1114,35 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="text">
        <string>Sleep Resources</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="save_button_2">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>750</y>
+        <width>100</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>16</pointsize>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+      </property>
+      <property name="text">
+       <string>Logout</string>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
       </property>
      </widget>
     </widget>
@@ -1343,7 +1372,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+       <string notr="true">background-color:#FFFFFF; color:#000000</string>
       </property>
       <property name="text">
        <string>Thunderstorms</string>
@@ -1431,7 +1460,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+       <string notr="true">background-color:#FFFFFF; color:#000000</string>
       </property>
       <property name="text">
        <string>Birds</string>
@@ -1453,7 +1482,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+       <string notr="true">background-color:#FFFFFF; color:#000000</string>
       </property>
       <property name="text">
        <string>Whales</string>
@@ -1617,9 +1646,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QPushButton" name="play_pause_btn">
       <property name="geometry">
        <rect>
-        <x>860</x>
+        <x>870</x>
         <y>740</y>
-        <width>111</width>
+        <width>101</width>
         <height>41</height>
        </rect>
       </property>
@@ -1629,11 +1658,23 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <pointsize>14</pointsize>
        </font>
       </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+       <string notr="true">background-color:#0000FF; color:#000000</string>
       </property>
       <property name="text">
        <string>Pause</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
       </property>
      </widget>
      <widget class="QPushButton" name="back_btn2">
@@ -1832,6 +1873,31 @@ Infants: 12 – 16 hours
        <string>Healthy sleep is about the amount of sleep, but also the quality of sleep one can get. 
 
  Your brain needs to go through a series of sleep cycles. These cycles help you get the best kind of rest.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>190</y>
+        <width>241</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>for relax tips</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
