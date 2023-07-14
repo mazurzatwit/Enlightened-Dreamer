@@ -39,7 +39,7 @@
      <string notr="true">background-color: 00000</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="home_page">
      <property name="styleSheet">
@@ -309,7 +309,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: #000000</string>
+       <string notr="true">background-color: #FFFFFF; color:#000000</string>
       </property>
       <property name="text">
        <string>Back</string>
@@ -509,7 +509,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: #000000</string>
+       <string notr="true">background-color: #FFFFFF; color:#000000</string>
       </property>
       <property name="text">
        <string>Submit</string>
@@ -680,6 +680,9 @@
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+      </property>
       <item>
        <property name="text">
         <string>No Dream</string>
@@ -841,7 +844,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <x>90</x>
         <y>150</y>
         <width>111</width>
-        <height>31</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="font">
@@ -849,6 +852,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <family>Palatino</family>
         <pointsize>14</pointsize>
        </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFF; color:#000000</string>
       </property>
       <item>
        <property name="text">
@@ -1375,7 +1384,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string notr="true">background-color:#FFFFFF; color:#000000</string>
       </property>
       <property name="text">
-       <string>Thunderstorms</string>
+       <string>Train</string>
       </property>
      </widget>
      <widget class="QPushButton" name="box_fan_btn">
@@ -1522,6 +1531,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <height>32</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true"> background-color: #FFFFFF; color:#000000</string>
+      </property>
       <item>
        <property name="text">
         <string>1 hour</string>
@@ -1662,7 +1674,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:#0000FF; color:#000000</string>
+       <string notr="true">background-color:#B99AFF; color:#000000</string>
       </property>
       <property name="text">
        <string>Pause</string>
