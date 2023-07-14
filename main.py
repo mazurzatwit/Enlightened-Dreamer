@@ -17,6 +17,7 @@ from PyQt5 import uic
 import login
 import sign_up
 import dashboard
+import tips
 import mysql.connector
 
 ## Initial Connection
@@ -93,6 +94,23 @@ class main_window(QMainWindow):
           self.tips_btn.clicked.connect(self.show_tips_page)
           self.back_tips = self.findChild(QPushButton, "back_btn2")
           self.back_tips.clicked.connect(self.show_dashboard)
+          self.white_noise = self.findChild(QPushButton, "white_noise_btn")
+          self.white_noise_text = self.white_noise.text()
+          self.white_noise.clicked.connect(lambda:self.play(self.white_noise_text))
+          self.fan_noise = self.findChild(QPushButton, "box_fan_btn")
+          self.fan_noise_text = self.fan_noise.text()
+          self.fan_noise.clicked.connect(lambda:self.play(self.fan_noise_text))
+          self.rain_noise = self.findChild(QPushButton, "rain_btn")
+          self.rain_noise_text = self.rain_noise.text()
+          self.rain_noise.clicked.connect(lambda:self.play(self.rain_noise_text))
+          self.train_noise = self.findChild(QPushButton, "thunderstorn_btn")
+          self.train_noise_text = self.train_noise.text()
+          self.train_noise.clicked.connect(lambda:self.play(self.train_noise_text))
+          self.pause_btn = self.findChild(QPushButton, "play_pause_btn")
+          self.pause_btn.clicked.connect(self.pause)
+
+
+
 
          
      def login_save_click(self):
@@ -161,6 +179,14 @@ class main_window(QMainWindow):
 
      def logout(self):
           self.ui_stack.setCurrentWidget(self.home)
+
+     def play(self, audio_name):
+          self.tips_instance = tips.tips_class(audio_name)
+          self.tips_instance.play()
+
+     def pause(self):
+          self.tips_instance.pause()
+          
 
 
 def main():
