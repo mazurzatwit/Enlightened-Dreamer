@@ -1125,7 +1125,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>Sleep Resources</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="save_button_2">
+     <widget class="QPushButton" name="logout_btn">
       <property name="geometry">
        <rect>
         <x>900</x>

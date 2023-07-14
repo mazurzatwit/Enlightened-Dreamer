@@ -85,6 +85,8 @@ class main_window(QMainWindow):
           self.date = self.findChild(QLineEdit, "dateEdit")
           self.dashboard_save_btn = self.findChild(QPushButton, "save_button")
           self.dashboard_save_btn.clicked.connect(self.dashboard_save)
+          self.logout_btn = self.findChild(QPushButton, "logout_btn")
+          self.logout_btn.clicked.connect(self.logout)
 
           #tips buttons
           self.tips_btn = self.findChild(QPushButton, "sleep_resources_btn")
@@ -104,6 +106,9 @@ class main_window(QMainWindow):
                self.ui_stack.setCurrentWidget(self.dashboard)
           else:
                print("false")
+
+          self.username_text.clear()
+          self.password_text.clear()     
 
         
      def sign_up_save(self):
@@ -154,6 +159,8 @@ class main_window(QMainWindow):
      def show_tips_page(self):
           self.ui_stack.setCurrentWidget(self.tips)
 
+     def logout(self):
+          self.ui_stack.setCurrentWidget(self.home)
 
 
 def main():
