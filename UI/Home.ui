@@ -20,7 +20,7 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>1</x>
+      <x>0</x>
       <y>0</y>
       <width>1041</width>
       <height>851</height>
@@ -39,7 +39,7 @@
      <string notr="true">background-color: 00000</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="home_page">
      <property name="styleSheet">
@@ -1702,7 +1702,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="sleep_bedtime_label">
       <property name="geometry">
        <rect>
-        <x>90</x>
+        <x>80</x>
         <y>120</y>
         <width>221</width>
         <height>61</height>
@@ -1725,10 +1725,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>410</x>
         <y>120</y>
         <width>221</width>
-        <height>61</height>
+        <height>51</height>
        </rect>
       </property>
       <property name="font">
@@ -1748,9 +1748,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>690</x>
-        <y>120</y>
-        <width>271</width>
+        <x>710</x>
+        <y>110</y>
+        <width>241</width>
         <height>61</height>
        </rect>
       </property>
@@ -1772,7 +1772,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <property name="geometry">
        <rect>
         <x>690</x>
-        <y>280</y>
+        <y>290</y>
         <width>271</width>
         <height>61</height>
        </rect>
@@ -1795,19 +1795,27 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>190</y>
+        <y>180</y>
         <width>241</width>
-        <height>271</height>
+        <height>301</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Palatino</family>
-        <pointsize>14</pointsize>
+        <pointsize>15</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>for sleep tips</string>
+       <string>- Minimize Screen Time: One to two hours before bed start decreasing you screen time 
+
+ - Natural light: Early in the day try and get at least 30 mins of natural light 
+
+ - Exercise: Being active for at least 30 mins can help you fall asleep 
+
+ - Caffeine: Stop drinking caffeine after 2pm 
+
+ - Sleep Environment: Keep it dark and the temperature between 65 and 72 degrees</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1822,13 +1830,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <x>710</x>
         <y>340</y>
         <width>231</width>
-        <height>201</height>
+        <height>211</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Palatino</family>
-        <pointsize>14</pointsize>
+        <pointsize>15</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1857,16 +1865,16 @@ Infants: 12 – 16 hours
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>710</x>
+        <x>700</x>
         <y>170</y>
-        <width>231</width>
+        <width>251</width>
         <height>121</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Palatino</family>
-        <pointsize>14</pointsize>
+        <pointsize>15</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1885,19 +1893,23 @@ Infants: 12 – 16 hours
       <property name="geometry">
        <rect>
         <x>400</x>
-        <y>190</y>
+        <y>170</y>
         <width>241</width>
-        <height>271</height>
+        <height>281</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Palatino</family>
-        <pointsize>14</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>for relax tips</string>
+       <string>- Meditation:  Bring your mind’s attention to the present moment by focusing on breathing and without drifting into concerns about the past or the future 
+
+ - Mental Images: Picture calming scenarios in your mind to help reduce anxiety and stress 
+
+ - Teas: Decaffeinated teas such as peppermint, chamomile, and lavender help with relaxation and stress relief </string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
