@@ -110,8 +110,6 @@ class main_window(QMainWindow):
           self.pause_btn.clicked.connect(self.pause)
 
 
-
-
          
      def login_save_click(self):
           username_text = self.username_text.text()
@@ -183,9 +181,15 @@ class main_window(QMainWindow):
      def play(self, audio_name):
           self.tips_instance = tips.tips_class(audio_name)
           self.tips_instance.play()
+          self.loop_time()
 
      def pause(self):
           self.tips_instance.pause()
+
+     def loop_time(self):
+          self.time_dropdown = self.findChild(QComboBox, "time_length")
+          selection = self.time_dropdown.currentText()
+          self.tips_instance.loop_sound(selection)
           
 
 
