@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2023 at 10:57 PM
+-- Generation Time: Jul 16, 2023 at 05:23 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `data` (
   `Sleeptime` varchar(100) DEFAULT NULL,
   `Waketime` varchar(100) DEFAULT NULL,
+  `DreamType` varchar(100) DEFAULT NULL,
   `Dream` varchar(1000) DEFAULT NULL,
   `Date` date DEFAULT NULL,
   `User_ID` varchar(100) NOT NULL
@@ -39,132 +40,107 @@ CREATE TABLE `data` (
 -- Dumping data for table `data`
 --
 
-INSERT INTO `data` (`Sleeptime`, `Waketime`, `Dream`, `Date`, `User_ID`) VALUES
-('8:12 PM', '6:24 AM', 'I found myself floating through a sky filled with cotton candy clouds.', '2023-01-07', '20773'),
-('2:45 AM', '10:17 AM', 'I was exploring a mysterious underwater city, swimming alongside colorful fish.', '2023-03-17', '20773'),
-('9:37 PM', '7:39 AM', 'I was soaring high above a breathtaking landscape, feeling the wind in my hair.', '2023-02-20', '20773'),
-('3:52 AM', '8:51 AM', 'I discovered a hidden treasure chest in a secret cave, filled with sparkling jewels.', '2023-03-29', '20773'),
-('10:28 PM', '9:28 AM', 'I was dancing on a stage in front of a cheering crowd, feeling the music pulsating through my body.', '2023-02-01', '20773'),
-('11:09 PM', '6:43 AM', 'I found myself in a fairytale forest, surrounded by talking animals and magical creatures.', '2023-01-22', '20773'),
-('4:13 AM', '8:01 AM', 'I was racing through a futuristic city on a hoverboard, dodging obstacles along the way.', '2023-03-02', '20773'),
-('8:57 PM', '7:18 AM', 'I stepped into a time machine and traveled back to the era of the dinosaurs, witnessing their majesty up close.', '2023-02-23', '20773'),
-('2:16 AM', '9:13 AM', 'I was exploring a haunted mansion, uncovering its dark secrets while trying to escape its ghostly inhabitants.', '2023-03-24', '20773'),
-('9:48 PM', '6:08 AM', 'I found myself in a world made entirely of candy, where everything I touched turned into delicious treats.', '2023-02-08', '20773'),
-('10:59 PM', '9:47 AM', 'I was a superhero with incredible powers, fighting off villains and saving the day.', '2023-03-21', '20773'),
-('11:51 PM', '7:57 AM', 'I attended a grand masquerade ball, dancing with elegant strangers in a dazzling ballroom.', '2023-02-16', '20773'),
-('3:07 AM', '8:15 AM', 'I embarked on a thrilling space adventure, exploring distant planets and encountering alien civilizations.', '2023-02-27', '20773'),
-('8:21 PM', '10:04 AM', 'I was solving complex puzzles in an ancient temple, unlocking its hidden chambers and mysteries.', '2023-02-07', '20773'),
-('12:36 AM', '6:34 AM', 'I found myself in a post-apocalyptic world, leading a group of survivors in search of a safe haven.', '2023-03-05', '20773'),
-('12:04 AM', '7:07 AM', 'I was a professional athlete, competing in a championship game and achieving victory.', '2023-01-09', '20773'),
-('4:46 AM', '9:39 AM', 'I stepped into a magical portal and entered a realm of dreams, where imagination knew no bounds.', '2023-02-14', '20773'),
-('7:34 PM', '10:36 AM', 'I was a detective, unraveling a baffling mystery and piecing together clues to catch the culprit.', '2023-01-15', '20773'),
-('1:31 AM', '6:56 AM', 'I participated in an epic battle between dragons and knights, witnessing the clash of fire and steel.', '2023-03-25', '20773'),
-('9:15 PM', '9:02 AM', 'I was a world-renowned chef, creating culinary masterpieces and delighting taste buds.', '2023-03-11', '20773'),
-('11:35 PM', '8:35 AM', 'I discovered a hidden garden filled with vibrant flowers and enchanting melodies.', '2023-03-09', '30174'),
-('4:30 AM', '7:52 AM', 'I was a famous actor, performing on a grand stage and receiving thunderous applause.', '2023-01-18', '30174'),
-('7:50 PM', '10:10 AM', 'I sailed across the vast ocean, exploring uncharted islands and encountering mythical creatures.', '2023-01-29', '30174'),
-('10:53 PM', '9:57 AM', 'I was a spy on a thrilling mission, using my cunning and skills to outsmart the enemy.', '2023-03-19', '30174'),
-('12:57 AM', '6:18 AM', 'I walked through a portal to a parallel dimension, where everything was upside down and gravity was reversed.', '2023-02-06', '30174'),
-('3:28 AM', '8:42 AM', 'I found myself in a surreal art gallery, where the paintings came to life and told their stories.', '2023-03-22', '30174'),
-('8:04 PM', '7:24 AM', 'I traveled through time, witnessing historical events unfold and meeting legendary figures.', '2023-03-13', '30174'),
-('2:08 AM', '9:19 AM', 'I was a rockstar, performing in front of a massive crowd and feeling the energy of the music.', '2023-02-11', '30174'),
-('9:56 PM', '6:47 AM', 'I ventured into a magical forest, befriending talking animals and uncovering ancient wisdom.', '2023-01-28', '30174'),
-('11:26 PM', '9:32 AM', 'I became a master of martial arts, battling opponents with lightning-fast moves and precision.', '2023-03-07', '30174'),
-('1:11 AM', '7:34 AM', 'I was a world traveler, visiting exotic destinations and immersing myself in different cultures.', '2023-02-21', '30174'),
-('4:07 AM', '8:29 AM', 'I participated in a thrilling car race, speeding through winding tracks and experiencing the adrenaline rush.', '2023-02-15', '30174'),
-('7:22 PM', '10:21 AM', 'I found myself in a land of giants, exploring towering landscapes and encountering colossal creatures.', '2023-01-20', '30174'),
-('9:32 PM', '6:11 AM', 'I became a master magician, performing mind-bending tricks and captivating audiences with illusions.', '2023-03-15', '30174'),
-('12:40 AM', '9:08 AM', 'I embarked on a quest to find a legendary treasure, facing challenges and overcoming obstacles along the way.', '2023-03-27', '30174'),
-('3:40 AM', '8:03 AM', 'I was a renowned scientist, making groundbreaking discoveries and unraveling the mysteries of the universe.', '2023-02-26', '30174'),
-('10:41 PM', '7:12 AM', 'I journeyed to the bottom of the ocean, marveling at the wonders of marine life and exploring ancient shipwrecks.', '2023-01-25', '30174'),
-('1:16 AM', '10:32 AM', 'I was a legendary warrior, wielding a mighty sword and defending my kingdom from evil forces.', '2023-02-18', '30174'),
-('11:48 PM', '9:53 AM', 'I explored an ancient Mayan temple, deciphering its hieroglyphs and unlocking its hidden chambers.', '2023-02-28', '30174'),
-('8:31 PM', '6:28 AM', 'I was a master architect, designing awe-inspiring buildings and shaping the skyline of a futuristic city.', '2023-03-06', '30174'),
-('2:36 AM', '8:20 AM', 'I discovered a hidden portal to a fantasy realm, where mythical creatures and magic were part of everyday life.', '2023-02-05', '33123'),
-('9:19 PM', '7:47 AM', 'I found myself in a land of ice and snow, embarking on a perilous journey to save a trapped princess.', '2023-02-17', '33123'),
-('11:14 PM', '10:28 AM', 'I became a professional race car driver, zooming through racetracks at incredible speeds.', '2023-03-03', '33123'),
-('4:03 AM', '6:39 AM', 'I stepped into a time loop, reliving the same day over and over, trying to solve a mysterious puzzle.', '2023-01-26', '33123'),
-('7:11 PM', '9:23 AM', 'I was a legendary knight, wielding a magical sword and defending the realm from dark forces.', '2023-02-12', '33123'),
-('12:21 AM', '7:03 AM', 'I ventured into a labyrinthine maze, searching for a hidden treasure while facing mind-bending challenges.', '2023-02-22', '33123'),
-('3:02 AM', '8:57 AM', 'I became a master pianist, performing a mesmerizing concert in a grand concert hall.', '2023-02-04', '33123'),
-('10:09 PM', '10:03 AM', 'I traveled to a distant planet, exploring its alien landscapes and encountering extraterrestrial life.', '2023-01-13', '33123'),
-('12:52 AM', '6:52 AM', 'I found myself in a dreamy wonderland, where gravity was optional and the laws of physics didnt apply.', '2023-03-18', '33123'),
-('11:41 PM', '9:43 AM', 'I was a master illusionist, performing mind-boggling tricks that left audiences in awe.', '2023-02-02', '33123'),
-('8:43 PM', '7:14 AM', 'I was flying over a breathtaking landscape, gliding effortlessly through the clouds.', '2023-03-12', '33123'),
-('2:53 AM', '8:46 AM', 'I found myself exploring a hidden underwater city, marveling at the colorful marine life.', '2023-02-10', '33123'),
-('9:06 PM', '10:14 AM', 'I was walking through a dense forest, surrounded by ancient trees and mystical creatures.', '2023-01-19', '33123'),
-('11:32 PM', '6:02 AM', 'I discovered a secret passage in an old mansion, leading to a room filled with treasure.', '2023-03-10', '33123'),
-('1:45 AM', '9:06 AM', 'I was running at incredible speed, racing against the wind in a vast open field.', '2023-03-31', '33123'),
-('3:57 AM', '7:30 AM', 'I stepped into a time machine and traveled back to the era of dinosaurs, witnessing their majestic presence.', '2023-01-24', '33123'),
-('7:03 PM', '8:38 AM', 'I found myself in a magical garden, filled with blooming flowers and talking animals.', '2023-02-13', '33123'),
-('9:40 PM', '10:25 AM', 'I was a detective, solving a complex mystery and unraveling the truth behind a puzzling crime.', '2023-03-04', '33123'),
-('12:45 AM', '6:22 AM', 'I embarked on a space adventure, exploring distant galaxies and encountering alien civilizations.', '2023-01-27', '33123'),
-('4:20 AM', '9:15 AM', 'I became a superhero, using my incredible powers to protect the city from villains.', '2023-02-19', '33123'),
-('10:17 PM', '7:21 AM', 'I was sailing on a pirate ship, searching for buried treasure on a remote island.', '2023-02-09', '42259'),
-('1:02 AM', '8:24 AM', 'I found myself in a bustling marketplace, surrounded by vibrant colors and exotic scents.', '2023-01-16', '42259'),
-('11:55 PM', '10:06 AM', 'I was climbing a towering mountain, conquering challenging heights and embracing the breathtaking views.', '2023-03-14', '42259'),
-('8:09 PM', '6:13 AM', 'I discovered a hidden doorway to a parallel universe, where everything was mirrored and surreal.', '2023-02-25', '42259'),
-('2:24 AM', '9:36 AM', 'I was a famous musician, performing on a grand stage and mesmerizing the audience with my talent.', '2023-01-31', '42259'),
-('9:24 PM', '7:28 AM', 'I stepped into a fairytale castle, where magic was real and enchantment filled the air.', '2023-03-01', '42259'),
-('11:18 PM', '8:08 AM', 'I found myself in a futuristic city, with flying cars and advanced technology at every corner.', '2023-02-24', '42259'),
-('3:16 AM', '10:19 AM', 'I was swimming in a crystal-clear lake, feeling the cool water against my skin.', '2023-03-08', '42259'),
-('7:42 PM', '6:31 AM', 'I embarked on a safari adventure, observing majestic wildlife in their natural habitat.', '2023-01-10', '42259'),
-('12:05 AM', '9:50 AM', 'I became a master chef, creating delectable dishes that delighted the senses.', '2023-02-03', '42259'),
-('3:32 AM', '7:09 AM', 'I was attending an extravagant masquerade ball, dancing with elegance and grace.', '2023-03-20', '42259'),
-('10:34 PM', '8:11 AM', 'I found myself in a haunted house, navigating its eerie corridors and encountering ghostly apparitions.', '2023-02-28', '42259'),
-('1:26 AM', '10:30 AM', 'I was a professional athlete, competing in a thrilling sports event and achieving victory.', '2023-01-17', '42259'),
-('11:03 PM', '6:50 AM', 'I discovered a hidden cave filled with ancient artifacts and long-lost treasures.', '2023-02-06', '42259'),
-('8:55 PM', '9:54 AM', 'I was exploring a futuristic cityscape, marveling at the towering skyscrapers and innovative technology.', '2023-03-16', '42259'),
-('2:44 AM', '7:56 AM', 'I became a renowned artist, creating beautiful masterpieces that captivated the world.', '2023-03-28', '42259'),
-('9:01 PM', '8:49 AM', 'I found myself in a post-apocalyptic world, surviving and rebuilding amidst the ruins.', '2023-02-22', '42259'),
-('11:59 PM', '10:34 AM', 'I was riding a roller coaster, feeling the exhilaration as it twisted and turned at high speeds.', '2023-03-25', '42259'),
-('1:58 AM', '6:16 AM', 'I embarked on a deep-sea diving expedition, exploring vibrant coral reefs and encountering marine creatures.', '2023-01-04', '42259'),
-('4:33 AM', '9:30 AM', 'I became a master martial artist, engaging in epic battles and honing my skills.', '2023-02-12', '42259'),
-('7:14 PM', '7:42 AM', 'I found myself in a whimsical land of candy, where everything was sweet and colorful.', '2023-03-06', '57088'),
-('9:08 PM', '8:31 AM', 'I was a world traveler, visiting exotic destinations and immersing myself in different cultures.', '2023-01-23', '57088'),
-('12:29 AM', '10:12 AM', 'I attended a grand royal ball, dancing in a grand ballroom and mingling with royalty.', '2023-02-09', '57088'),
-('3:14 AM', '6:04 AM', 'I discovered a hidden temple, filled with ancient wisdom and guarded secrets.', '2023-03-15', '57088'),
-('10:57 PM', '9:12 AM', 'I was a master magician, performing mind-bending illusions that left the audience in awe.', '2023-02-02', '57088'),
-('1:39 AM', '7:06 AM', 'I stepped into a time portal and traveled to different historical eras, witnessing significant events firsthand.', '2023-03-01', '57088'),
-('11:38 PM', '8:18 AM', 'I found myself in a celestial realm, surrounded by stars and planets, and floating weightlessly.', '2023-02-16', '57088'),
-('8:25 PM', '10:01 AM', 'I was a legendary warrior, wielding a powerful weapon and defending my kingdom from evil forces.', '2023-01-27', '57088'),
-('2:20 AM', '6:26 AM', 'I ventured into a mythical forest, encountering fantastical creatures and uncovering ancient prophecies.', '2023-03-24', '57088'),
-('9:51 PM', '9:26 AM', 'I became a renowned author, crafting captivating stories that transported readers to different worlds.', '2023-01-16', '57088'),
-('11:47 PM', '7:36 AM', 'I found myself in a dreamlike garden, where flowers bloomed in radiant colors and emitted melodious tunes.', '2023-02-23', '57088'),
-('3:25 AM', '8:55 AM', 'I was a secret agent, navigating dangerous missions and outsmarting cunning adversaries.', '2023-03-23', '57088'),
-('7:58 PM', '10:23 AM', 'I embarked on an epic quest, facing mythical beasts and overcoming challenging obstacles.', '2023-02-07', '57088'),
-('12:13 AM', '6:59 AM', 'I discovered a hidden portal to a dimension of dreams, where imagination knew no bounds.', '2023-03-04', '57088'),
-('3:48 AM', '9:04 AM', 'I was a master architect, designing awe-inspiring structures that redefined the city skyline.', '2023-01-21', '57088'),
-('10:03 PM', '7:51 AM', 'I found myself in a vast desert, traversing endless dunes and seeking an oasis of solace.', '2023-02-18', '57088'),
-('1:01 AM', '8:40 AM', 'I was a master pianist, performing a captivating concert in a grand concert hall.', '2023-03-10', '57088'),
-('11:23 PM', '10:08 AM', 'I traveled to an alien planet, encountering extraterrestrial beings and exploring their advanced civilization.', '2023-02-14', '57088'),
-('8:47 PM', '6:37 AM', 'I found myself in a futuristic laboratory, conducting groundbreaking experiments and pushing the boundaries of science.', '2023-01-30', '57088'),
-('2:56 AM', '9:58 AM', 'I was a master dancer, performing intricate and graceful routines on a grand stage.', '2023-03-07', '57088');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `User_ID` varchar(100) NOT NULL,
-  `Name` varchar(100) DEFAULT NULL,
-  `Email` varchar(100) NOT NULL,
-  `Username` varchar(100) NOT NULL,
-  `Password` varbinary(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`User_ID`, `Name`, `Email`, `Username`, `Password`) VALUES
-('20773', 'Jane Doe', 'JD@gmail.com', 'JDoe', 0x2597d363777059bfab4784da3da853cd),
-('30174', 'Ellie Blue', 'EllieBlue@gmail.com', 'Elle', 0xa355fc886f2f4026c7af955f0cdea0db),
-('33123', 'Sam Sharp', 'Sharps@gmail.com', 'Sam', 0xe7b0bd076cbd5078796a1359a328dc5b),
-('42259', 'John Deer', 'JohnD@gmail.com', 'JohnD', 0xc8170779c18025b920ec5e2094942380),
-('57088', 'Luis small', 'LouieSmall@gmail.com', 'Louie', 0x6d6cfdd96049ed6fbf586634ca13b839);
+INSERT INTO `data` (`Sleeptime`, `Waketime`, `DreamType`, `Dream`, `Date`, `User_ID`) VALUES
+('8:12 PM', '6:24 AM', 'No Dream', 'I found myself floating through a sky filled with cotton candy clouds.', '2023-01-07', '23999'),
+('2:45 AM', '10:17 AM', 'Lucid Dream', 'I was exploring a mysterious underwater city, swimming alongside colorful fish.', '2023-03-17', '23999'),
+('9:37 PM', '7:39 AM', 'Day Dream', 'I was soaring high above a breathtaking landscape, feeling the wind in my hair.', '2023-02-20', '23999'),
+('3:52 AM', '8:51 AM', 'Normal Dream', 'I discovered a hidden treasure chest in a secret cave, filled with sparkling jewels.', '2023-03-29', '23999'),
+('10:28 PM', '9:28 AM', 'Nightmare', 'I was dancing on a stage in front of a cheering crowd, feeling the music pulsating through my body.', '2023-02-01', '23999'),
+('11:09 PM', '6:43 AM', 'No Dream', 'I found myself in a fairytale forest, surrounded by talking animals and magical creatures.', '2023-01-22', '23999'),
+('4:13 AM', '8:01 AM', 'False Awakening', 'I was racing through a futuristic city on a hoverboard, dodging obstacles along the way.', '2023-03-02', '23999'),
+('8:57 PM', '7:18 AM', 'Lucid Dream', 'I stepped into a time machine and traveled back to the era of the dinosaurs, witnessing their majesty up close.', '2023-02-23', '23999'),
+('2:16 AM', '9:13 AM', 'Nightmare', 'I was exploring a haunted mansion, uncovering its dark secrets while trying to escape its ghostly inhabitants.', '2023-03-24', '23999'),
+('9:48 PM', '6:08 AM', 'Normal Dream', 'I found myself in a world made entirely of candy, where everything I touched turned into delicious treats.', '2023-02-08', '23999'),
+('10:59 PM', '9:47 AM', 'False Awakening', 'I was a superhero with incredible powers, fighting off villains and saving the day.', '2023-03-21', '23999'),
+('11:51 PM', '7:57 AM', 'No Dream', 'I attended a grand masquerade ball, dancing with elegant strangers in a dazzling ballroom.', '2023-02-16', '23999'),
+('3:07 AM', '8:15 AM', 'Nightmare', 'I embarked on a thrilling space adventure, exploring distant planets and encountering alien civilizations.', '2023-02-27', '23999'),
+('8:21 PM', '10:04 AM', 'Normal Dream', 'I was solving complex puzzles in an ancient temple, unlocking its hidden chambers and mysteries.', '2023-02-07', '23999'),
+('12:36 AM', '6:34 AM', 'Normal Dream', 'I found myself in a post-apocalyptic world, leading a group of survivors in search of a safe haven.', '2023-03-05', '23999'),
+('12:04 AM', '7:07 AM', 'Lucid Dream', 'I was a professional athlete, competing in a championship game and achieving victory.', '2023-01-09', '23999'),
+('4:46 AM', '9:39 AM', 'False Awakening', 'I stepped into a magical portal and entered a realm of dreams, where imagination knew no bounds.', '2023-02-14', '23999'),
+('7:34 PM', '10:36 AM', 'Normal Dream', 'I was a detective, unraveling a baffling mystery and piecing together clues to catch the culprit.', '2023-01-15', '23999'),
+('1:31 AM', '6:56 AM', 'No Dream', 'I participated in an epic battle between dragons and knights, witnessing the clash of fire and steel.', '2023-03-25', '23999'),
+('9:15 PM', '9:02 AM', 'Lucid Dream', 'I was a world-renowned chef, creating culinary masterpieces and delighting taste buds.', '2023-03-11', '23999'),
+('11:35 PM', '8:35 AM', 'Normal Dream', 'I discovered a hidden garden filled with vibrant flowers and enchanting melodies.', '2023-03-09', '36806'),
+('4:30 AM', '7:52 AM', 'Day Dream', 'I was a famous actor, performing on a grand stage and receiving thunderous applause.', '2023-01-18', '36806'),
+('7:50 PM', '10:10 AM', 'Lucid Dream', 'I sailed across the vast ocean, exploring uncharted islands and encountering mythical creatures.', '2023-01-29', '36806'),
+('10:53 PM', '9:57 AM', 'Normal Dream', 'I was a spy on a thrilling mission, using my cunning and skills to outsmart the enemy.', '2023-03-19', '36806'),
+('12:57 AM', '6:18 AM', 'Nightmare', 'I walked through a portal to a parallel dimension, where everything was upside down and gravity was reversed.', '2023-02-06', '36806'),
+('3:28 AM', '8:42 AM', 'No Dream', 'I found myself in a surreal art gallery, where the paintings came to life and told their stories.', '2023-03-22', '36806'),
+('8:04 PM', '7:24 AM', 'False Awakening', 'I traveled through time, witnessing historical events unfold and meeting legendary figures.', '2023-03-13', '36806'),
+('2:08 AM', '9:19 AM', 'Lucid Dream', 'I was a rockstar, performing in front of a massive crowd and feeling the energy of the music.', '2023-02-11', '36806'),
+('9:56 PM', '6:47 AM', 'Normal Dream', 'I ventured into a magical forest, befriending talking animals and uncovering ancient wisdom.', '2023-01-28', '36806'),
+('11:26 PM', '9:32 AM', 'Nightmare', 'I became a master of martial arts, battling opponents with lightning-fast moves and precision.', '2023-03-07', '36806'),
+('1:11 AM', '7:34 AM', 'False Awakening', 'I was a world traveler, visiting exotic destinations and immersing myself in different cultures.', '2023-02-21', '36806'),
+('4:07 AM', '8:29 AM', 'Lucid Dream', 'I participated in a thrilling car race, speeding through winding tracks and experiencing the adrenaline rush.', '2023-02-15', '36806'),
+('7:22 PM', '10:21 AM', 'Normal Dream', 'I found myself in a land of giants, exploring towering landscapes and encountering colossal creatures.', '2023-01-20', '36806'),
+('9:32 PM', '6:11 AM', 'Nightmare', 'I became a master magician, performing mind-bending tricks and captivating audiences with illusions.', '2023-03-15', '36806'),
+('12:40 AM', '9:08 AM', 'Day Dream', 'I embarked on a quest to find a legendary treasure, facing challenges and overcoming obstacles along the way.', '2023-03-27', '36806'),
+('3:40 AM', '8:03 AM', 'Normal Dream', 'I was a renowned scientist, making groundbreaking discoveries and unraveling the mysteries of the universe.', '2023-02-26', '36806'),
+('10:41 PM', '7:12 AM', 'No Dream', 'I journeyed to the bottom of the ocean, marveling at the wonders of marine life and exploring ancient shipwrecks.', '2023-01-25', '36806'),
+('1:16 AM', '10:32 AM', 'False Awakening', 'I was a legendary warrior, wielding a mighty sword and defending my kingdom from evil forces.', '2023-02-18', '36806'),
+('11:48 PM', '9:53 AM', 'Normal Dream', 'I explored an ancient Mayan temple, deciphering its hieroglyphs and unlocking its hidden chambers.', '2023-02-28', '36806'),
+('8:31 PM', '6:28 AM', 'No Dream', 'I was a master architect, designing awe-inspiring buildings and shaping the skyline of a futuristic city.', '2023-03-06', '36806'),
+('2:36 AM', '8:20 AM', 'Lucid Dream', 'I discovered a hidden portal to a fantasy realm, where mythical creatures and magic were part of everyday life.', '2023-02-05', '80010'),
+('9:19 PM', '7:47 AM', 'Nightmare', 'I found myself in a land of ice and snow, embarking on a perilous journey to save a trapped princess.', '2023-02-17', '80010'),
+('11:14 PM', '10:28 AM', 'Normal Dream', 'I became a professional race car driver, zooming through racetracks at incredible speeds.', '2023-03-03', '80010'),
+('4:03 AM', '6:39 AM', 'No Dream', 'I stepped into a time loop, reliving the same day over and over, trying to solve a mysterious puzzle.', '2023-01-26', '80010'),
+('7:11 PM', '9:23 AM', 'Lucid Dream', 'I was a legendary knight, wielding a magical sword and defending the realm from dark forces.', '2023-02-12', '80010'),
+('12:21 AM', '7:03 AM', 'Normal Dream', 'I ventured into a labyrinthine maze, searching for a hidden treasure while facing mind-bending challenges.', '2023-02-22', '80010'),
+('3:02 AM', '8:57 AM', 'Lucid Dream', 'I became a master pianist, performing a mesmerizing concert in a grand concert hall.', '2023-02-04', '80010'),
+('10:09 PM', '10:03 AM', 'Nightmare', 'I traveled to a distant planet, exploring its alien landscapes and encountering extraterrestrial life.', '2023-01-13', '80010'),
+('12:52 AM', '6:52 AM', 'No Dream', 'I found myself in a dreamy wonderland, where gravity was optional and the laws of physics didnt apply.', '2023-03-18', '80010'),
+('11:41 PM', '9:43 AM', 'False Awakening', 'I was a master illusionist, performing mind-boggling tricks that left audiences in awe.', '2023-02-02', '80010'),
+('8:43 PM', '7:14 AM', 'Day Dream', 'I was flying over a breathtaking landscape, gliding effortlessly through the clouds.', '2023-03-12', '80010'),
+('2:53 AM', '8:46 AM', 'Normal Dream', 'I found myself exploring a hidden underwater city, marveling at the colorful marine life.', '2023-02-10', '80010'),
+('9:06 PM', '10:14 AM', 'Lucid Dream', 'I was walking through a dense forest, surrounded by ancient trees and mystical creatures.', '2023-01-19', '80010'),
+('11:32 PM', '6:02 AM', 'Nightmare', 'I discovered a secret passage in an old mansion, leading to a room filled with treasure.', '2023-03-10', '80010'),
+('1:45 AM', '9:06 AM', 'No Dream', 'I was running at incredible speed, racing against the wind in a vast open field.', '2023-03-31', '80010'),
+('3:57 AM', '7:30 AM', 'Lucid Dream', 'I stepped into a time machine and traveled back to the era of dinosaurs, witnessing their majestic presence.', '2023-01-24', '80010'),
+('7:03 PM', '8:38 AM', 'Normal Dream', 'I found myself in a magical garden, filled with blooming flowers and talking animals.', '2023-02-13', '80010'),
+('9:40 PM', '10:25 AM', 'Normal Dream', 'I was a detective, solving a complex mystery and unraveling the truth behind a puzzling crime.', '2023-03-04', '80010'),
+('12:45 AM', '6:22 AM', 'Nightmare', 'I embarked on a space adventure, exploring distant galaxies and encountering alien civilizations.', '2023-01-27', '80010'),
+('4:20 AM', '9:15 AM', 'Nightmare', 'I became a superhero, using my incredible powers to protect the city from villains.', '2023-02-19', '80010'),
+('10:17 PM', '7:21 AM', 'Normal Dream', 'I was sailing on a pirate ship, searching for buried treasure on a remote island.', '2023-02-09', '89581'),
+('1:02 AM', '8:24 AM', 'Lucid Dream', 'I found myself in a bustling marketplace, surrounded by vibrant colors and exotic scents.', '2023-01-16', '89581'),
+('11:55 PM', '10:06 AM', 'Normal Dream', 'I was climbing a towering mountain, conquering challenging heights and embracing the breathtaking views.', '2023-03-14', '89581'),
+('8:09 PM', '6:13 AM', 'Normal Dream', 'I discovered a hidden doorway to a parallel universe, where everything was mirrored and surreal.', '2023-02-25', '89581'),
+('2:24 AM', '9:36 AM', 'No Dream', 'I was a famous musician, performing on a grand stage and mesmerizing the audience with my talent.', '2023-01-31', '89581'),
+('9:24 PM', '7:28 AM', 'Normal Dream', 'I stepped into a fairytale castle, where magic was real and enchantment filled the air.', '2023-03-01', '89581'),
+('11:18 PM', '8:08 AM', 'Normal Dream', 'I found myself in a futuristic city, with flying cars and advanced technology at every corner.', '2023-02-24', '89581'),
+('3:16 AM', '10:19 AM', 'Nightmare', 'I was swimming in a crystal-clear lake, feeling the cool water against my skin.', '2023-03-08', '89581'),
+('7:42 PM', '6:31 AM', 'Lucid Dream', 'I embarked on a safari adventure, observing majestic wildlife in their natural habitat.', '2023-01-10', '89581'),
+('12:05 AM', '9:50 AM', 'No Dream', 'I became a master chef, creating delectable dishes that delighted the senses.', '2023-02-03', '89581'),
+('3:32 AM', '7:09 AM', 'No Dream', 'I was attending an extravagant masquerade ball, dancing with elegance and grace.', '2023-03-20', '89581'),
+('10:34 PM', '8:11 AM', 'Normal Dream', 'I found myself in a haunted house, navigating its eerie corridors and encountering ghostly apparitions.', '2023-02-28', '89581'),
+('1:26 AM', '10:30 AM', 'Normal Dream', 'I was a professional athlete, competing in a thrilling sports event and achieving victory.', '2023-01-17', '89581'),
+('11:03 PM', '6:50 AM', 'Nightmare', 'I discovered a hidden cave filled with ancient artifacts and long-lost treasures.', '2023-02-06', '89581'),
+('8:55 PM', '9:54 AM', 'Normal Dream', 'I was exploring a futuristic cityscape, marveling at the towering skyscrapers and innovative technology.', '2023-03-16', '89581'),
+('2:44 AM', '7:56 AM', 'No Dream', 'I became a renowned artist, creating beautiful masterpieces that captivated the world.', '2023-03-28', '89581'),
+('9:01 PM', '8:49 AM', 'Normal Dream', 'I found myself in a post-apocalyptic world, surviving and rebuilding amidst the ruins.', '2023-02-22', '89581'),
+('11:59 PM', '10:34 AM', 'Nightmare', 'I was riding a roller coaster, feeling the exhilaration as it twisted and turned at high speeds.', '2023-03-25', '89581'),
+('1:58 AM', '6:16 AM', 'Day Dream', 'I embarked on a deep-sea diving expedition, exploring vibrant coral reefs and encountering marine creatures.', '2023-01-04', '89581'),
+('4:33 AM', '9:30 AM', 'Day Dream', 'I became a master martial artist, engaging in epic battles and honing my skills.', '2023-02-12', '89581'),
+('7:14 PM', '7:42 AM', 'Lucid Dream', 'I found myself in a whimsical land of candy, where everything was sweet and colorful.', '2023-03-06', '95907'),
+('9:08 PM', '8:31 AM', 'Lucid Dream', 'I was a world traveler, visiting exotic destinations and immersing myself in different cultures.', '2023-01-23', '95907'),
+('12:29 AM', '10:12 AM', 'Normal Dream', 'I attended a grand royal ball, dancing in a grand ballroom and mingling with royalty.', '2023-02-09', '95907'),
+('3:14 AM', '6:04 AM', 'Day Dream', 'I discovered a hidden temple, filled with ancient wisdom and guarded secrets.', '2023-03-15', '95907'),
+('10:57 PM', '9:12 AM', 'Normal Dream', 'I was a master magician, performing mind-bending illusions that left the audience in awe.', '2023-02-02', '95907'),
+('1:39 AM', '7:06 AM', 'False Awakening', 'I stepped into a time portal and traveled to different historical eras, witnessing significant events firsthand.', '2023-03-01', '95907'),
+('11:38 PM', '8:18 AM', 'Normal Dream', 'I found myself in a celestial realm, surrounded by stars and planets, and floating weightlessly.', '2023-02-16', '95907'),
+('8:25 PM', '10:01 AM', 'Normal Dream', 'I was a legendary warrior, wielding a powerful weapon and defending my kingdom from evil forces.', '2023-01-27', '95907'),
+('2:20 AM', '6:26 AM', 'No Dream', 'I ventured into a mythical forest, encountering fantastical creatures and uncovering ancient prophecies.', '2023-03-24', '95907'),
+('9:51 PM', '9:26 AM', 'Lucid Dream', 'I became a renowned author, crafting captivating stories that transported readers to different worlds.', '2023-01-16', '95907'),
+('11:47 PM', '7:36 AM', 'Lucid Dream', 'I found myself in a dreamlike garden, where flowers bloomed in radiant colors and emitted melodious tunes.', '2023-02-23', '95907'),
+('3:25 AM', '8:55 AM', 'No Dream', 'I was a secret agent, navigating dangerous missions and outsmarting cunning adversaries.', '2023-03-23', '95907'),
+('7:58 PM', '10:23 AM', 'Lucid Dream', 'I embarked on an epic quest, facing mythical beasts and overcoming challenging obstacles.', '2023-02-07', '95907'),
+('12:13 AM', '6:59 AM', 'No Dream', 'I discovered a hidden portal to a dimension of dreams, where imagination knew no bounds.', '2023-03-04', '95907'),
+('3:48 AM', '9:04 AM', 'No Dream', 'I was a master architect, designing awe-inspiring structures that redefined the city skyline.', '2023-01-21', '95907'),
+('10:03 PM', '7:51 AM', 'Normal Dream', 'I found myself in a vast desert, traversing endless dunes and seeking an oasis of solace.', '2023-02-18', '95907'),
+('1:01 AM', '8:40 AM', 'Normal Dream', 'I was a master pianist, performing a captivating concert in a grand concert hall.', '2023-03-10', '95907'),
+('11:23 PM', '10:08 AM', 'Lucid Dream', 'I traveled to an alien planet, encountering extraterrestrial beings and exploring their advanced civilization.', '2023-02-14', '95907'),
+('8:47 PM', '6:37 AM', 'Lucid Dream', 'I found myself in a futuristic laboratory, conducting groundbreaking experiments and pushing the boundaries of science.', '2023-01-30', '95907'),
+('2:56 AM', '9:58 AM', 'No Dream', 'I was a master dancer, performing intricate and graceful routines on a grand stage.', '2023-03-07', '95907');
 
 --
 -- Indexes for dumped tables
@@ -175,12 +151,6 @@ INSERT INTO `users` (`User_ID`, `Name`, `Email`, `Username`, `Password`) VALUES
 --
 ALTER TABLE `data`
   ADD KEY `User_ID_FK1` (`User_ID`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`User_ID`);
 
 --
 -- Constraints for dumped tables
@@ -196,4 +166,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
