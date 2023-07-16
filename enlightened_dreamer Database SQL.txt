@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2023 at 05:23 PM
+-- Generation Time: Jul 16, 2023 at 05:28 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -142,6 +142,31 @@ INSERT INTO `data` (`Sleeptime`, `Waketime`, `DreamType`, `Dream`, `Date`, `User
 ('8:47 PM', '6:37 AM', 'Lucid Dream', 'I found myself in a futuristic laboratory, conducting groundbreaking experiments and pushing the boundaries of science.', '2023-01-30', '95907'),
 ('2:56 AM', '9:58 AM', 'No Dream', 'I was a master dancer, performing intricate and graceful routines on a grand stage.', '2023-03-07', '95907');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `User_ID` varchar(100) NOT NULL,
+  `Name` varchar(100) DEFAULT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Username` varchar(100) NOT NULL,
+  `Password` varbinary(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`User_ID`, `Name`, `Email`, `Username`, `Password`) VALUES
+('23999', 'Jane Doe', 'JD@gmail.com', 'JDoe', 0x2597d363777059bfab4784da3da853cd),
+('36806', 'John Deer', 'JohnD@gmail.com', 'JohnD', 0xc8170779c18025b920ec5e2094942380),
+('80010', 'Ellie Blue', 'EllieBlue@gmail.com', 'Elle', 0xa355fc886f2f4026c7af955f0cdea0db),
+('89581', 'Luis small', 'LouieSmall@gmail.com', 'Louie', 0x6d6cfdd96049ed6fbf586634ca13b839),
+('95907', 'Sam Sharp', 'Sharps@gmail.com', 'Sam', 0xe7b0bd076cbd5078796a1359a328dc5b);
+
 --
 -- Indexes for dumped tables
 --
@@ -151,6 +176,12 @@ INSERT INTO `data` (`Sleeptime`, `Waketime`, `DreamType`, `Dream`, `Date`, `User
 --
 ALTER TABLE `data`
   ADD KEY `User_ID_FK1` (`User_ID`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`User_ID`);
 
 --
 -- Constraints for dumped tables
