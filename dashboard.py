@@ -13,12 +13,14 @@ cursor = connection.cursor()
 
 class dashboard_view:
      
-    def __init__(self, sleep_time, wake_time, dream, date, username):
+    def __init__(self, sleep_time, wake_time, dream_type, dream, date, username):
         self.sleep_time = sleep_time
         self.wake_time = wake_time
+        self.dream_type = dream_type
         self.dream = dream
         self.date = date
         self.username = username
+
 
     def dream_info_popup(self):
         popup = QMessageBox()
@@ -42,7 +44,7 @@ class dashboard_view:
 
          print(id)
 
-         save_dream = "INSERT INTO Data SELECT ('%s'), ('%s'), ('%s'), ('%s'), ('%s')" % (self.sleep_time, self.wake_time, self.dream, self.date, id)
+         save_dream = "INSERT INTO Data SELECT ('%s'), ('%s'), ('%s'), ('%s'), ('%s'), ('%s')" % (self.sleep_time, self.wake_time, self.dream_type, self.dream, self.date, id)
 
          cursor.execute(save_dream)
          connection.commit()
