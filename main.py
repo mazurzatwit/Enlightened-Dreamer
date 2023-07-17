@@ -19,6 +19,8 @@ import sign_up
 import dashboard
 import tips
 import mysql.connector
+from googleapiclient.discovery import build
+import pprint
 
 ## Initial Connection
 connection = mysql.connector.connect(host='localhost',
@@ -198,7 +200,15 @@ class main_window(QMainWindow):
           selection = self.time_dropdown.currentText()
           self.tips_instance.loop_sound(selection)
           
-
+     def search(self):
+          ## define API key
+          api_key = "AIzaSyALTaIyQ65yaYeaZdaym06P44jxYtZPpmI"
+          cse_key = "e22bd4953fa7149bb"
+          
+          resource = build("customsearch", 'v1', developerKey=api_key).cse()
+          result = resource.list(q=' ', cx=cse_key).execute()
+          
+          pprint.pprint(result) 
 
 def main():
     app = QApplication(sys.argv)
