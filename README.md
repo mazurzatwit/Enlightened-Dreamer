@@ -12,12 +12,12 @@ VS Code Extensions Required: Python and Pylance from Microsoft
 Python Download: https://www.python.org/downloads/release/python-31010/ 
 
 MacOS X Console Commands:
- 1) python get-pip.py
- 2) brew install pyqt
+ 1. python get-pip.py
+ 2. brew install pyqt
 
 Windows Console Commands:
- 1) py get-pip.py
- 2) pip install pyqt5
+ 1. py get-pip.py
+ 2. pip install pyqt5
 
 Set up Enlightened Dreamer App:
 
@@ -25,6 +25,14 @@ Set up Enlightened Dreamer App:
 2. Set up database using the _.sql file on a preferred MySQL server
 3. Open up python file in preferred Python3 IDE
 4. From main.py, run the program to launch GUI
+
+For Audio to Work Install PyGame:
+
+Install Command:
+python3 -m pip install -U pygame --user
+
+Testing PyGame (Turn Computer Audio On to Test):
+python3 -m pygame.examples.aliens 
 
 ##License
 
