@@ -20,7 +20,7 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-20</x>
       <y>0</y>
       <width>1041</width>
       <height>851</height>
@@ -39,7 +39,7 @@
      <string notr="true">background-color: 00000</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="home_page">
      <property name="styleSheet">
@@ -749,7 +749,7 @@
         <x>610</x>
         <y>140</y>
         <width>331</width>
-        <height>101</height>
+        <height>121</height>
        </rect>
       </property>
       <property name="font">
@@ -956,9 +956,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <property name="geometry">
        <rect>
         <x>840</x>
-        <y>260</y>
+        <y>280</y>
         <width>100</width>
-        <height>32</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -1138,9 +1138,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <property name="geometry">
        <rect>
         <x>610</x>
-        <y>260</y>
+        <y>280</y>
         <width>131</width>
-        <height>32</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -1184,6 +1184,138 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="flat">
        <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="search_bar_1">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>280</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: 00000</string>
+      </property>
+      <property name="placeholderText">
+       <string>Search up your dream...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="search_btn_1">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>280</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="search_page">
+     <property name="styleSheet">
+      <string notr="true">background-color: #d8bfd8</string>
+     </property>
+     <widget class="QPushButton" name="search_btn_2">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>190</y>
+        <width>81</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="search_bar_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>190</y>
+        <width>811</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: 00000</string>
+      </property>
+      <property name="placeholderText">
+       <string>Search up your dream...</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="search_title">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>40</y>
+        <width>441</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>What do your dreams mean?</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="search_label">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>160</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Search Dreams:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
       </property>
      </widget>
     </widget>
