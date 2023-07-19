@@ -51,6 +51,7 @@ class main_window(QMainWindow):
           self.sign_up_page = self.findChild(QWidget, "sign_up_page")
           self.dashboard = self.findChild(QWidget, "dashboard_page")
           self.tips = self.findChild(QWidget, "tips_page")
+          self.search = self.findChild(QWidget, "search_page")
 
           self.ui_stack.setCurrentWidget(self.home)
           
@@ -111,6 +112,15 @@ class main_window(QMainWindow):
           self.train_noise.clicked.connect(lambda:self.play(self.train_noise_text))
           self.pause_btn = self.findChild(QPushButton, "play_pause_btn")
           self.pause_btn.clicked.connect(self.pause)
+          
+          self.search1_btn = self.findChild(QPushButton, "search_btn1")
+          self.search1_btn.clicked.connect(self.show_search_page)
+
+          #search buttons
+          self.back_search_btn = self.findChild(QPushButton, "back_btn4")          
+          self.back_search_btn.clicked.connect(self.show_dashboard)
+
+          
 
 
          
@@ -180,6 +190,9 @@ class main_window(QMainWindow):
 
      def show_dashboard(self):
           self.ui_stack.setCurrentWidget(self.dashboard)
+
+     def show_search_page(self):
+          self.ui_stack.setCurrentWidget(self.search)     
 
      def show_tips_page(self):
           self.ui_stack.setCurrentWidget(self.tips)

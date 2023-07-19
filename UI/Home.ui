@@ -39,7 +39,7 @@
      <string notr="true">background-color: 00000</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="home_page">
      <property name="styleSheet">
@@ -334,7 +334,7 @@
       <property name="font">
        <font>
         <family>Palatino</family>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -927,10 +927,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>20</y>
-        <width>75</width>
-        <height>75</height>
+        <x>30</x>
+        <y>10</y>
+        <width>100</width>
+        <height>100</height>
        </rect>
       </property>
       <property name="maximumSize">
@@ -1186,7 +1186,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QTextEdit" name="search_bar_1">
+     <widget class="QTextEdit" name="search_bar1">
       <property name="geometry">
        <rect>
         <x>100</x>
@@ -1208,7 +1208,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>Search up your dream...</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="search_btn_1">
+     <widget class="QPushButton" name="search_btn1">
       <property name="geometry">
        <rect>
         <x>430</x>
@@ -1223,6 +1223,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <pointsize>16</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+      </property>
       <property name="text">
        <string>Search</string>
       </property>
@@ -1232,7 +1235,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <property name="styleSheet">
       <string notr="true">background-color: #d8bfd8</string>
      </property>
-     <widget class="QPushButton" name="search_btn_2">
+     <widget class="QPushButton" name="search_btn2">
       <property name="geometry">
        <rect>
         <x>920</x>
@@ -1247,11 +1250,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <pointsize>16</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+      </property>
       <property name="text">
        <string>Search</string>
       </property>
      </widget>
-     <widget class="QTextEdit" name="search_bar_2">
+     <widget class="QTextEdit" name="search_bar2">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -1318,6 +1324,56 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
       </property>
      </widget>
+     <widget class="QPushButton" name="back_btn4">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palatino</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFF; color:#000000</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="logo_search_page">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../app_logo-removebg-preview.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tips_page">
      <property name="styleSheet">
@@ -1349,10 +1405,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="logo_tips_page">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>30</x>
         <y>10</y>
-        <width>91</width>
-        <height>91</height>
+        <width>100</width>
+        <height>100</height>
        </rect>
       </property>
       <property name="maximumSize">
@@ -1856,7 +1912,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QPushButton" name="back_btn2">
       <property name="geometry">
        <rect>
-        <x>120</x>
+        <x>150</x>
         <y>40</y>
         <width>111</width>
         <height>31</height>
@@ -1878,8 +1934,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <widget class="QLabel" name="sleep_bedtime_label">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>120</y>
+        <x>270</x>
+        <y>80</y>
         <width>221</width>
         <height>61</height>
        </rect>
