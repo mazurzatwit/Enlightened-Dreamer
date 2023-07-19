@@ -115,6 +115,7 @@ class main_window(QMainWindow):
           
           self.search1_btn = self.findChild(QPushButton, "search_btn1")
           self.search1_btn.clicked.connect(self.show_search_page)
+          self.dashboard_search = self.findChild(QTextEdit, "search_bar1")
 
           #search buttons
           self.back_search_btn = self.findChild(QPushButton, "back_btn4")          
@@ -214,12 +215,13 @@ class main_window(QMainWindow):
           self.tips_instance.loop_sound(selection)
           
      def search(self):
+          query = self.dashboard_search.toPlainText()
           ## define API key
           api_key = "AIzaSyALTaIyQ65yaYeaZdaym06P44jxYtZPpmI"
           cse_key = "e22bd4953fa7149bb"
           
           resource = build("customsearch", 'v1', developerKey=api_key).cse()
-          result = resource.list(q=' ', cx=cse_key).execute()
+          result = resource.list(q=query, cx=cse_key).execute()
           
           pprint.pprint(result) 
 
