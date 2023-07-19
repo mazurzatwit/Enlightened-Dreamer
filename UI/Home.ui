@@ -1374,6 +1374,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+     <widget class="QLabel" name="for_search_results">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>270</y>
+        <width>881</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tips_page">
      <property name="styleSheet">
