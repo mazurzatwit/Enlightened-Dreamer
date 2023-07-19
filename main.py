@@ -51,7 +51,7 @@ class main_window(QMainWindow):
           self.sign_up_page = self.findChild(QWidget, "sign_up_page")
           self.dashboard = self.findChild(QWidget, "dashboard_page")
           self.tips = self.findChild(QWidget, "tips_page")
-          self.search = self.findChild(QWidget, "search_page")
+          self.search_page = self.findChild(QWidget, "search_page")
 
           self.ui_stack.setCurrentWidget(self.home)
           
@@ -115,6 +115,8 @@ class main_window(QMainWindow):
           
           self.search1_btn = self.findChild(QPushButton, "search_btn1")
           self.search1_btn.clicked.connect(self.show_search_page)
+          self.search1_btn.clicked.connect(self.search)
+          self.result_label = self.findChild(QLabel, "for_search_results")
           self.dashboard_search = self.findChild(QTextEdit, "search_bar1")
 
           #search buttons
@@ -193,7 +195,7 @@ class main_window(QMainWindow):
           self.ui_stack.setCurrentWidget(self.dashboard)
 
      def show_search_page(self):
-          self.ui_stack.setCurrentWidget(self.search)     
+          self.ui_stack.setCurrentWidget(self.search_page)     
 
      def show_tips_page(self):
           self.ui_stack.setCurrentWidget(self.tips)
@@ -213,17 +215,38 @@ class main_window(QMainWindow):
           self.time_dropdown = self.findChild(QComboBox, "time_length")
           selection = self.time_dropdown.currentText()
           self.tips_instance.loop_sound(selection)
+
+     def decrypt_keys(self):
+          keys = "Select aes_decrypt(UNHEX(API), 'PASS') as APIkey, aes_decrypt(UNHEX(CSE), 'PASS') as CSEkey from privatekeys"
+          
+          cursor.execute(keys)
+          key_data = cursor.fetchall()
+
+          for key in key_data:
+            api_key = key[0]
+            cse_key = key[1]
+
+          string_api_key = str(api_key)
+          x = string_api_key.split("'")
+          string_cse_key = str(cse_key)
+          y = string_cse_key.split("'")
+
+          self.key_array = [x[1],y[1]]
+          return self.key_array
           
      def search(self):
           query = self.dashboard_search.toPlainText()
           ## define API key
-          api_key = "AIzaSyALTaIyQ65yaYeaZdaym06P44jxYtZPpmI"
-          cse_key = "e22bd4953fa7149bb"
+          decrypted_keys = self.decrypt_keys()
+          api_key = decrypted_keys[0]
+          cse_key = decrypted_keys[1]
           
           resource = build("customsearch", 'v1', developerKey=api_key).cse()
           result = resource.list(q=query, cx=cse_key).execute()
           
+          #self.result_label.setText(result)
           pprint.pprint(result) 
+          self.dashboard_search.clear()
 
 def main():
     app = QApplication(sys.argv)
