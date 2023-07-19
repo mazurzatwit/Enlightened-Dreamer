@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2023 at 05:28 PM
+-- Generation Time: Jul 19, 2023 at 06:29 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -140,7 +140,26 @@ INSERT INTO `data` (`Sleeptime`, `Waketime`, `DreamType`, `Dream`, `Date`, `User
 ('1:01 AM', '8:40 AM', 'Normal Dream', 'I was a master pianist, performing a captivating concert in a grand concert hall.', '2023-03-10', '95907'),
 ('11:23 PM', '10:08 AM', 'Lucid Dream', 'I traveled to an alien planet, encountering extraterrestrial beings and exploring their advanced civilization.', '2023-02-14', '95907'),
 ('8:47 PM', '6:37 AM', 'Lucid Dream', 'I found myself in a futuristic laboratory, conducting groundbreaking experiments and pushing the boundaries of science.', '2023-01-30', '95907'),
-('2:56 AM', '9:58 AM', 'No Dream', 'I was a master dancer, performing intricate and graceful routines on a grand stage.', '2023-03-07', '95907');
+('2:56 AM', '9:58 AM', 'No Dream', 'I was a master dancer, performing intricate and graceful routines on a grand stage.', '2023-03-07', '95907'),
+('SomeSleeptime', 'SomeWaketime', 'somedreamtype', 'SomeDream', '2023-06-08', '80010');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `privatekeys`
+--
+
+CREATE TABLE `privatekeys` (
+  `API` varchar(100) NOT NULL,
+  `CSE` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `privatekeys`
+--
+
+INSERT INTO `privatekeys` (`API`, `CSE`) VALUES
+('04742A1BC1C495B1AFCFDDB3E072C846C7905F192A742DA48ADA953CEF9A7E6177A835A2160C242609E014951318C71E', 'C7F775416FE075223019B28CBAB6D500E0CFB0A32A892DF461D5F2917E4EBBA7');
 
 -- --------------------------------------------------------
 
