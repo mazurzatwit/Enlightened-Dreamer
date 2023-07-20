@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import uic
+from datetime import date, timedelta
 import mysql.connector
 
 ## Initial Connection
@@ -49,3 +50,26 @@ class dashboard_view:
          cursor.execute(save_dream)
          connection.commit()
           
+
+    def dream_records(self):
+        get_user_id = "SELECT User_ID FROM USERS WHERE Username = ('%s')" % (self.username)
+        cursor.execute(get_user_id)
+        user_id = cursor.fetchall()
+        for user in user_id:
+            id = user[0]
+
+        curr_date = date.today()
+        past_date = curr_date - timedelta(days = 7)
+        get_dreams = "SELECT Date, DreamType, Dream FROM data WHERE User_ID = ('%s') AND Date BETWEEN ('%s')  AND ('%s') " % (id, past_date.isoformat(), curr_date.isoformat())
+        cursor.execute(get_dreams)
+        dreams_of_week = cursor.fetchall()
+        #print(dreams_of_week[0])
+        for i in range(len(dreams_of_week)):
+            #print(i, dreams_of_week[i])
+            for j in range(len(dreams_of_week[i])):
+                print(dreams_of_week[i][j])
+                #for k in dreams_of_week[i][j]:
+                    #print(dreams_of_week[i][j][0])
+
+
+        #print(curr_dream)

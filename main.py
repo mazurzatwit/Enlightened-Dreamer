@@ -67,6 +67,7 @@ class main_window(QMainWindow):
           self.username_text = self.findChild(QLineEdit, "username_textbox")
           self.password_text = self.findChild(QLineEdit, "password_textbox")
           self.login_btn.clicked.connect(self.login_save_click)
+          self.login_btn.clicked.connect(self.get_dream_records)
           self.back_button.clicked.connect(self.show_home_page)
 
           #sign up page button
@@ -247,6 +248,17 @@ class main_window(QMainWindow):
           #self.result_label.setText(result)
           pprint.pprint(result) 
           self.dashboard_search.clear()
+
+     def get_dream_records(self):
+          sleep_time = self.sleep_time.text()
+          wake_time = self.wake_time.text()
+          dream_type = self.dream_type_dropdown.currentText()
+          dream = self.dream.toPlainText()
+          date = self.date.text()
+          username = self.username_text.text()
+
+          self.dash_dreams = dashboard.dashboard_view(sleep_time, wake_time, dream_type, dream, date, username)
+          self.dash_dreams.dream_records()
 
 def main():
     app = QApplication(sys.argv)
