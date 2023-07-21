@@ -93,6 +93,7 @@ class main_window(QMainWindow):
           self.dashboard_save_btn.clicked.connect(self.dashboard_save)
           self.logout_btn = self.findChild(QPushButton, "logout_btn")
           self.logout_btn.clicked.connect(self.logout)
+          self.saved_dream_label = self.findChild(QLabel, "for_saved_dreams")
 
           #tips buttons
           self.tips_btn = self.findChild(QPushButton, "sleep_resources_btn")
@@ -258,7 +259,9 @@ class main_window(QMainWindow):
           username = self.username_text.text()
 
           self.dash_dreams = dashboard.dashboard_view(sleep_time, wake_time, dream_type, dream, date, username)
-          self.dash_dreams.dream_records()
+          self.records = self.dash_dreams.dream_records()
+          self.saved_dream_label.setFont(QFont('Palatino', 10))
+          self.saved_dream_label.setText(self.records)
 
 def main():
     app = QApplication(sys.argv)
