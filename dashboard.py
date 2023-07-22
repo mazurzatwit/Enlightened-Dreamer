@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import uic
 from datetime import date, timedelta
+import matplotlib.pyplot as plt
+import numpy as np
 import mysql.connector
 
 ## Initial Connection
@@ -82,13 +84,54 @@ class dashboard_view:
         curr_date = date.today()
         past_date = curr_date - timedelta(days = 7)
 
-        get_analytics = "SELECT DreamType, CONCAT(FLOOR(ABS(TIME_TO_SEC(TIMEDIFF("\
-                        "STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%h:%i %p'), STR_TO_DATE(CONCAT(Waketime, ' AM'), '%h:%i %p')))) / 3600), '.',"\
-                        "MOD(FLOOR(ABS(TIME_TO_SEC(TIMEDIFF("\
-                        "STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%h:%i %p'), STR_TO_DATE(CONCAT(Waketime, ' AM'), '%h:%i %p')"\
-                        "))) / 60),60 ) ) AS time_in_between"\
-                        "FROM data WHERE User_ID = ('%s') AND Date BETWEEN ('%s') AND ('%s')" % (id, past_date.isoformat(), curr_date.isoformat())
+        get_analytics = """SELECT DreamType, CONCAT(FLOOR(ABS(TIME_TO_SEC(TIMEDIFF(STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%%h:%%i %%p'), STR_TO_DATE(CONCAT(Waketime, ' AM'), '%%h:%%i %%p')))) / 3600), '.',MOD(FLOOR(ABS(TIME_TO_SEC(TIMEDIFF(STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%%h:%%i %%p'), STR_TO_DATE(CONCAT(Waketime, ' AM'), '%%h:%%i %%p')))) / 60),60 ) ) AS time_in_between FROM data WHERE User_ID = ('%s') AND Date BETWEEN ('%s') AND ('%s')""" % (id, past_date.isoformat(), curr_date.isoformat())
         
+        # x axis values
+
+        x = []
+
+        # corresponding y axis values
+
+        y = []
+
         cursor.execute(get_analytics)
         analytics_of_week = cursor.fetchall()
-        
+        for point in analytics_of_week:
+            x.append(str(point[0]))
+            if str(point[1]) == "None":
+                y.append(float(0)) 
+            else:
+                y.append(float(point[1]))
+
+
+        # plotting the points
+
+        plt.scatter(x, y, label= "stars", color= "purple", marker= "*", s=100)
+
+
+        # setting x and y axis range
+
+        plt.ylim(0,18)
+
+        plt.xlim(-1, len(x))
+
+
+        # naming the x axis
+
+        plt.xlabel('Dream Type')
+
+        # naming the y axis
+
+        plt.ylabel('Sleep Time (Hours)')
+
+        # giving a title to my graph
+
+        plt.title('Dream Type vs. Hours Slept')
+
+        plt.xticks(rotation=45, ha='right')
+        plt.yticks(range(0, 19, 1))
+
+        plt.tight_layout()
+        plt.savefig("Graph/graph_image.png")
+        #plt.show()
+                
