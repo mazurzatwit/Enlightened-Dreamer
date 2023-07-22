@@ -984,6 +984,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <height>311</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="text">
        <string>Saved Users Dreams displayed here</string>
       </property>
@@ -1231,6 +1237,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <width>411</width>
         <height>311</height>
        </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
       <property name="text">
        <string>Saved Users Dream Graph here</string>
