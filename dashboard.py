@@ -70,3 +70,25 @@ class dashboard_view:
                 results = results + "\n\n" + element
        
         return results
+    
+    def dream_analytics(self):
+        results = ""
+        get_user_id = "SELECT User_ID FROM USERS WHERE Username = ('%s')" % (self.username)
+        cursor.execute(get_user_id)
+        user_id = cursor.fetchall()
+        for user in user_id:
+            id = user[0]
+
+        curr_date = date.today()
+        past_date = curr_date - timedelta(days = 7)
+
+        get_analytics = "SELECT DreamType, CONCAT(FLOOR(ABS(TIME_TO_SEC(TIMEDIFF("\
+                        "STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%h:%i %p'), STR_TO_DATE(CONCAT(Waketime, ' AM'), '%h:%i %p')))) / 3600), '.',"\
+                        "MOD(FLOOR(ABS(TIME_TO_SEC(TIMEDIFF("\
+                        "STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%h:%i %p'), STR_TO_DATE(CONCAT(Waketime, ' AM'), '%h:%i %p')"\
+                        "))) / 60),60 ) ) AS time_in_between"\
+                        "FROM data WHERE User_ID = ('%s') AND Date BETWEEN ('%s') AND ('%s')" % (id, past_date.isoformat(), curr_date.isoformat())
+        
+        cursor.execute(get_analytics)
+        analytics_of_week = cursor.fetchall()
+        
