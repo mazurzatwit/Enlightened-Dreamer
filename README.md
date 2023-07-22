@@ -34,6 +34,9 @@ python3 -m pip install -U pygame --user
 Testing PyGame (Turn Computer Audio On to Test):
 python3 -m pygame.examples.aliens 
 
+Install Matplotlib:
+pip install matplotlib
+
 ##License
 
 MIT License
