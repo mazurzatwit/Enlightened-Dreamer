@@ -975,16 +975,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>Save</string>
       </property>
      </widget>
-     <widget class="QOpenGLWidget" name="openGLWidget">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>380</y>
-        <width>411</width>
-        <height>321</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QLabel" name="for_saved_dreams">
       <property name="geometry">
        <rect>
@@ -999,6 +989,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="day_label">
@@ -1228,6 +1221,25 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="text">
        <string>Search</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="for_dreams_graph">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>390</y>
+        <width>411</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Saved Users Dream Graph here</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
