@@ -66,7 +66,6 @@ class dashboard_view:
         get_dreams = "SELECT CONCAT (Date, ' - ', DreamType, ' - ',Dream) AS UserEntry FROM data WHERE User_ID = ('%s') AND Date BETWEEN ('%s') AND ('%s')" % (id, past_date.isoformat(), curr_date.isoformat())
         cursor.execute(get_dreams)
         dreams_of_week = cursor.fetchall()
-        results = "   Date   -   Dream Type   -    Description    "
         for dream in dreams_of_week:
             for element in dream:
                 results = results + "\n\n" + element

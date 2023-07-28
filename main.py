@@ -95,6 +95,7 @@ class main_window(QMainWindow):
           self.logout_btn = self.findChild(QPushButton, "logout_btn")
           self.logout_btn.clicked.connect(self.logout)
           self.saved_dream_label = self.findChild(QLabel, "for_saved_dreams")
+          self.saved_dream_label.setScaledContents(True)
           self.saved_dream_graph = self.findChild(QLabel, "for_dreams_graph")
 
           #tips buttons
