@@ -84,8 +84,26 @@ class dashboard_view:
         curr_date = date.today()
         past_date = curr_date - timedelta(days = 7)
 
-        get_analytics = """SELECT DreamType, CONCAT(FLOOR(ABS(TIME_TO_SEC(TIMEDIFF(STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%%h:%%i %%p'), STR_TO_DATE(CONCAT(Waketime, ' AM'), '%%h:%%i %%p')))) / 3600), '.',MOD(FLOOR(ABS(TIME_TO_SEC(TIMEDIFF(STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%%h:%%i %%p'), STR_TO_DATE(CONCAT(Waketime, ' AM'), '%%h:%%i %%p')))) / 60),60 ) ) AS time_in_between FROM data WHERE User_ID = ('%s') AND Date BETWEEN ('%s') AND ('%s')""" % (id, past_date.isoformat(), curr_date.isoformat())
-        
+        #get_analytics = """SELECT DreamType, CONCAT(FLOOR(ABS(TIME_TO_SEC(TIMEDIFF(STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%%h:%%i %%p'), STR_TO_DATE(CONCAT(Waketime, ' AM'), '%%h:%%i %%p')))) / 3600), '.',MOD(FLOOR(ABS(TIME_TO_SEC(TIMEDIFF(STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%%h:%%i %%p'), STR_TO_DATE(CONCAT(Waketime, ' AM'), '%%h:%%i %%p')))) / 60),60 ) ) AS time_in_between FROM data WHERE User_ID = ('%s') AND Date BETWEEN ('%s') AND ('%s')""" % (id, past_date.isoformat(), curr_date.isoformat())
+        get_analytics = "SELECT DreamType, CONCAT(FLOOR( ABS(TIME_TO_SEC(TIMEDIFF(CASE"\
+                        "WHEN STR_TO_DATE(Sleeptime, '%%h:%%i %%p') > STR_TO_DATE(Waketime, '%%h:%%i %%p')"\
+                        "THEN STR_TO_DATE(CONCAT(Sleeptime, ' PM'), '%%h:%%i %%p')"\
+                        "ELSE STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%%h:%%i %%p')"\
+                        "END, CASE"\
+                        "WHEN STR_TO_DATE(Sleeptime, '%%h:%%i %%p') > STR_TO_DATE(Waketime, '%%h:%%i %%p')"\
+                        "THEN STR_TO_DATE(CONCAT(Waketime, ' AM'), '%%h:%%i %%p') + INTERVAL 1 DAY"\
+                        "ELSE STR_TO_DATE(CONCAT(Waketime, ' AM'), '%%h:%%i %%p')"\
+                        "END))) / 3600),'.', MOD(FLOOR(ABS(TIME_TO_SEC(TIMEDIFF(CASE"\
+                        "WHEN STR_TO_DATE(Sleeptime, '%%h:%%i %%p') > STR_TO_DATE(Waketime, '%%h:%%i %%p')"\
+                        "THEN STR_TO_DATE(CONCAT(Sleeptime, ' PM'), '%%h:%%i %%p')"\
+                        "ELSE STR_TO_DATE(CONCAT(Sleeptime, ' AM'), '%%h:%%i %%p')"\
+                        "END,CASE WHEN STR_TO_DATE(Sleeptime, '%%h:%%i %%p') > STR_TO_DATE(Waketime, '%%h:%%i %%p')"\
+                        "THEN STR_TO_DATE(CONCAT(Waketime, ' AM'), '%%h:%%i %%p') + INTERVAL 1 DAY"\
+                        "ELSE STR_TO_DATE(CONCAT(Waketime, ' AM'), '%%h:%%i %%p')"\
+                        "END))) / 60),60)) AS time_in_between FROM data"\
+                        "WHERE User_ID = ('%s') AND Date BETWEEN ('%s') AND ('%s')" % (id, past_date.isoformat(), curr_date.isoformat())
+
+
         # x axis values
 
         x = []
