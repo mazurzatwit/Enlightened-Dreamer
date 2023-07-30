@@ -21,6 +21,7 @@ import tips
 import mysql.connector
 from googleapiclient.discovery import build
 import pprint
+import json
 
 ## Initial Connection
 connection = mysql.connector.connect(host='localhost',
@@ -128,9 +129,6 @@ class main_window(QMainWindow):
           self.back_search_btn = self.findChild(QPushButton, "back_btn4")          
           self.back_search_btn.clicked.connect(self.show_dashboard)
 
-          
-
-
          
      def login_save_click(self):
           username_text = self.username_text.text()
@@ -147,7 +145,6 @@ class main_window(QMainWindow):
           #self.username_text.clear()
           self.password_text.clear()     
 
-        
      def sign_up_save(self):
          name_text = self.name_text.text()
          email_text = self.email_text.text()
