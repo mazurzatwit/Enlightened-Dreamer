@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 19, 2023 at 06:29 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Host: localhost
+-- Generation Time: Aug 01, 2023 at 08:10 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,7 @@ CREATE TABLE `data` (
   `Dream` varchar(1000) DEFAULT NULL,
   `Date` date DEFAULT NULL,
   `User_ID` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `data`
@@ -141,25 +141,37 @@ INSERT INTO `data` (`Sleeptime`, `Waketime`, `DreamType`, `Dream`, `Date`, `User
 ('11:23 PM', '10:08 AM', 'Lucid Dream', 'I traveled to an alien planet, encountering extraterrestrial beings and exploring their advanced civilization.', '2023-02-14', '95907'),
 ('8:47 PM', '6:37 AM', 'Lucid Dream', 'I found myself in a futuristic laboratory, conducting groundbreaking experiments and pushing the boundaries of science.', '2023-01-30', '95907'),
 ('2:56 AM', '9:58 AM', 'No Dream', 'I was a master dancer, performing intricate and graceful routines on a grand stage.', '2023-03-07', '95907'),
-('SomeSleeptime', 'SomeWaketime', 'somedreamtype', 'SomeDream', '2023-06-08', '80010');
+('SomeSleeptime', 'SomeWaketime', 'somedreamtype', 'SomeDream', '2023-06-08', '80010'),
+('10:39 PM', '6:13 AM', 'Normal Dream', 'I had a dream that I was at an addition to join a band with a ton of other people there so we had to play a live demo on guitar. ', '2023-07-21', '14202'),
+('10:39 PM', '6:50 AM', 'Normal Dream', 'I had a dream that I had Alissa unblocked on snap and she posted a story where she admitted to missing Nora after seeing me on campus. ', '2023-07-21', '14202'),
+('11:03 PM', '3:21 AM', 'Nightmare', 'I was with Liv along with Jason and Trvis Kelce and we were checking into a mental hospitl ofr research purposes! ', '2023-07-23', '14202'),
+('11:03 PM', '4:51 AM', 'Nightmare', 'Winston got attacked by an otter :O ', '2023-07-23', '14202'),
+('11:01 PM', '6:45 AM', 'No Dream', '', '2023-07-24', '14202'),
+('11:37 PM', '6:40 AM', 'No Dream', '', '2023-07-25', '14202'),
+('11:43 PM', '7:03 AM', 'Nightmare', ' I dropped my phone down a storm drain. ', '2023-07-26', '14202'),
+('8:43 PM', '6:28 AM', 'No Dream', '', '2023-07-27', '14202'),
+('11:36 PM', '7:03 AM', 'Normal Dream', ' I had a dream that we had two britas. ', '2023-07-28', '14202'),
+('10:47 PM', '6:27 AM', 'Lucid Dream', ' I was with Liv, Marc and Joey and we were playing real life gang beasts and were in the ocean in kayaks as part of the game and we’re arguing what level to go to next.', '2023-07-22', '14202'),
+('10:41 PM', '6:57 AM', 'Lucid Dream', 'I had a dream I was the first female F1 driver - I knew it was dream ', '2023-07-29', '14202'),
+('10:39 PM', '8:37AM', 'False Awakening', 'I had a dream where we finished Senior Project, but I woke up instead!', '2023-07-30', '14202');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `privatekeys`
+-- Table structure for table `PrivateKeys`
 --
 
-CREATE TABLE `privatekeys` (
+CREATE TABLE `PrivateKeys` (
   `API` varchar(100) NOT NULL,
   `CSE` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `privatekeys`
+-- Dumping data for table `PrivateKeys`
 --
 
-INSERT INTO `privatekeys` (`API`, `CSE`) VALUES
-('04742A1BC1C495B1AFCFDDB3E072C846C7905F192A742DA48ADA953CEF9A7E6177A835A2160C242609E014951318C71E', 'C7F775416FE075223019B28CBAB6D500E0CFB0A32A892DF461D5F2917E4EBBA7');
+INSERT INTO `PrivateKeys` (`API`, `CSE`) VALUES
+('10F154D455B842889942AA3E6EBD147D8CAD0F775507FF3B907B8C143BDA297C39738F9D07F106007FC6A525A6044FF6', 'C7F775416FE075223019B28CBAB6D500E0CFB0A32A892DF461D5F2917E4EBBA7');
 
 -- --------------------------------------------------------
 
@@ -173,13 +185,14 @@ CREATE TABLE `users` (
   `Email` varchar(100) NOT NULL,
   `Username` varchar(100) NOT NULL,
   `Password` varbinary(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`User_ID`, `Name`, `Email`, `Username`, `Password`) VALUES
+('14202', 'Nora Bernashe', 'bernashen@wit.edu', 'Nora', 0xa5cbd950be65af61f6b3b328b4c35a4b),
 ('23999', 'Jane Doe', 'JD@gmail.com', 'JDoe', 0x2597d363777059bfab4784da3da853cd),
 ('36806', 'John Deer', 'JohnD@gmail.com', 'JohnD', 0xc8170779c18025b920ec5e2094942380),
 ('80010', 'Ellie Blue', 'EllieBlue@gmail.com', 'Elle', 0xa355fc886f2f4026c7af955f0cdea0db),
